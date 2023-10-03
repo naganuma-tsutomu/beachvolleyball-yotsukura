@@ -1,0 +1,264 @@
+// ------------ 参加申込
+.inquiry {
+    &__block {
+        padding: 2rem;
+        border: .2rem solid #888888;
+        background: #ffffff;
+    }
+
+    // フォーム場の入力欄の共通css
+    input[type="text"], input[type="tel"], input[type="email"], .wpcf7-textarea {
+        width: 100%;
+        margin: .5rem 0;
+        padding: 1rem 1rem;
+        border: .1rem solid #cccccc;
+        border-radius: .4rem;
+        color: #333333;
+        font-size: 1.4rem;
+        font-weight: normal;
+        &::placeholder {
+            opacity: 1;
+            color: #afafaf;
+            font-weight: normal;
+        }
+    }
+
+    // 入力内容確認ボタンの装飾
+    .btn {
+        position: relative;
+        height: 5rem;
+
+        // 読み込みのアニメーションの非表示
+        .wpcf7-spinner {
+            display: none;
+        }
+
+        input[type="submit"] {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            margin: 0 auto;
+            padding: 1rem;
+            border-radius: .4rem;
+            box-shadow: 0 .3rem 0 #000000;
+            background: #f57500;
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            &:active {
+                opacity: .6;
+            }
+        }
+    }
+
+    .labelbox {
+        margin: 0 0 1.5rem;
+        .nameblock {
+            display: flex;
+            justify-content: space-between;
+            &__left {
+                width: 48%;
+                margin: 0;
+                color: #888888;
+                font-size: 1.4rem;
+                font-weight: bold;
+            }
+        }
+
+        // メンバー
+        .member {
+            margin: 0 0 2rem;
+            padding: 15px 0;
+            border-top: solid 2px #888888;
+            border-bottom: solid 2px #888888;
+            .required {
+                color: #ff2300;
+                font-size: 12px;
+            }
+
+            .any {
+                color: #0080ff;
+                font-size: 12px;
+            }
+        }
+    }
+
+    // 自動で非表示になってしまうので強制的に表示
+    [data-class="wpcf7cf_group"] {
+        display: block !important;
+    }
+
+    .required {
+        color: #ff2300;
+        font-size: 14px;
+    }
+
+    .any {
+        color: #0080ff;
+        font-size: 14px;
+    }
+
+    .label {
+        display: block;
+        margin: 0 0 5px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .memberlabel {
+        display: block;
+        margin: 0 10px 10px 0;
+        color: #888888;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .nameblock, .memnameblock, .kanamemnameblock {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nameblock__right, .nameblock__left, .memnameblock__right, .memnameblock__left, .kanamemnameblock__right, .kanamemnameblock__left {
+        width: 48%;
+        margin: 0;
+        color: #888888;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .membersex, .memnameblock__left, .kanamemnameblock__left, .memnameblock__right, .kanamemnameblock__right {
+        margin: 0 0 5px;
+        color: #888888;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .membersex {
+        .wpcf7-list-item {
+            padding: 1rem !important;
+            border: .1rem solid #cccccc;
+            border-radius: 4px;
+            font-size: 14px !important;
+        }
+        .wpcf7-list-item.first {
+            margin: .5rem 0;
+        }
+        .wpcf7-form-control {
+            padding: 0 !important;
+        }
+        /* 全体の入力欄（input）の角丸変更 */
+        .wpcf7-form-control {
+            border-radius: 4px !important;
+        }
+    }
+}
+
+// ------------------------------ PC
+
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 100rem;
+        margin: 8.0rem auto 0;
+        padding: 5.0rem 3.0rem;
+        background: #ffffff;
+    }
+
+    // ---------- 共通見出し
+    h2 {
+        font-size: 2.6rem;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%);
+            width: calc(30% + 15px);
+            height: 10px;
+            background-color: #30a2ff;
+        }
+    }
+
+    // ------------ 参加申込
+    .inquiry {
+        max-width: 80rem;
+        margin: 0 auto 3rem;
+        .textbox {
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        &__block {
+            padding: 4rem;
+        }
+        // 入力内容確認ボタンの装飾
+        .btn {
+            input[type="submit"] {
+                width: 40%;
+                padding: 1.5rem 2rem;
+                font-size: 1.5rem;
+                &:hover {
+                    opacity: .6;
+                }
+            }
+        }
+
+        .labelbox {
+            .nameblock {
+                &__left {
+                    font-size: 1.4rem;
+                }
+            }
+
+            // メンバー
+            .member {
+                .required {
+                    color: #ff2300;
+                    font-size: 14px;
+                }
+
+                .any {
+                    color: #0080ff;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .required {
+            color: #ff2300;
+            font-size: 1.4rem;
+        }
+
+        .any {
+            color: #0080ff;
+            font-size: 1.4rem;
+        }
+
+        .label {
+            font-size: 1.8rem;
+        }
+
+        .memberlabel {
+            font-size: 1.6rem;
+        }
+
+        .nameblock__right, .nameblock__left, .memnameblock__right, .memnameblock__left, .kanamemnameblock__right, .kanamemnameblock__left {
+            font-size: 1.4 rem;
+        }
+
+        .membersex, .memnameblock__left, .kanamemnameblock__left, .memnameblock__right, .kanamemnameblock__right {
+            margin: 0 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .membersex {
+            .wpcf7-list-item {
+                font-size: 1.6rem !important;
+            }
+        }
+    }
+}

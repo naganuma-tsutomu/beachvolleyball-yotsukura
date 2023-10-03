@@ -1,0 +1,57 @@
+.thanksblock {
+    margin: 0 0 5.0rem;
+    padding: 3rem;
+    background: #ffffff;
+    &__title {
+        display: block;
+        margin: 0 0 3rem;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        line-height: 1.8;
+        margin: 0 0 3rem;
+        font-size: 1.5rem;
+        strong {
+            margin: 1rem 0;
+            color: #ff2300;
+        }
+    }
+    a {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        padding: 1rem;
+        border-radius: .4rem;
+        box-shadow: 0 .3rem 0 #000000;
+        background: #cccccc;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        &:active {
+            background: #f57500;
+            color: #ffffff;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 80rem;
+    }
+    .thanksblock {
+        margin: 0;
+        &__title {
+            font-size: 3.0rem;
+        }
+        p {
+            font-size: 1.6rem;
+        }
+        a {
+            margin: 5.0rem auto 0;
+        }
+    }
+}
+

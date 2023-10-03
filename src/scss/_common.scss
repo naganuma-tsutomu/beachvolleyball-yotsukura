@@ -1,0 +1,364 @@
+/* ==================== デザインA(スマートフォン) ==================== */
+html {
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow-y: visible;
+    background: #f6f1f1;
+    font-size: 62.5%; //pxだと10px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.3rem;
+}
+
+.main {
+    margin: 0 0 5.0rem;
+    &.fixed {
+        .menu {
+            position: fixed;
+            top: 0;
+            z-index: 2;
+            width: 100%;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, .24);
+            background-color: #ffffff;
+        }
+        .container {
+            margin: 7.5rem auto 0;
+        }
+    }
+}
+
+.inlinetxt {
+    display: inline-block;
+}
+
+// ---------- TOP画像
+.top {
+    position: relative;
+    &__backcon {
+        height: 25rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__txtcon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 30rem;
+        img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
+
+// ---------- メニュー
+.menu {
+    display: block;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        text-align: center;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        li {
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 30%;
+            position: relative;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            background: #ffffff;
+            color: #000000;
+            font-weight: bold;
+
+            & + li::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                height: 1em;
+                margin: auto;
+                border-left: 1px solid #999999;
+            }
+
+
+            a {
+                display: block;
+                position: relative;
+                font-size: 1.3rem;
+                &:active {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: calc(35% + 20px);
+                        height: 5px;
+                        background-color: #30a2ff;
+                    }
+                }
+                &.menuactive {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: calc(35% + 20px);
+                        height: 5px;
+                        background-color: #30a2ff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ---------- 共通のコンテナ
+.container {
+    position: relative;
+    width: 90%;
+    margin: 3.0rem auto 0;
+}
+
+// ---------- 共通見出し
+h2 {
+    position: relative;
+    z-index: 1;
+    width: auto;
+    margin: 0 0 3rem;
+    color: #000000;
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-align: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        z-index: -1;
+        transform: translateX(-50%);
+        width: calc(50% + 15px);
+        height: 10px;
+        background-color: #19a7ce;
+    }
+}
+
+// ---------- footer
+footer {
+    background: #19a7ce;
+
+    .logo {
+        width: 25.0rem;
+        margin: 4rem auto 0;
+        padding: 4rem 0 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .footerbox {
+        padding: 3.0rem;
+        color: #ffffff;
+    }
+    .left, .right {
+        display: block;
+        &__flex {
+            display: flex;
+            margin: 0 0 1.0rem;
+            &_h {
+                display: block;
+                width: 23%;
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-align: justify;
+
+                text-align-last: justify;
+            }
+            &_bet {
+                margin: 0 .5rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            &_txt {
+                display: block;
+                width: 70%;
+                font-size: 1.5rem;
+                font-weight: bold;
+                letter-spacing: .2em;
+            }
+        }
+    }
+    .underfooterbox {
+        padding: 0 0 3.0rem;
+        border-top: .1rem solid #ffffff;
+        a {
+            display: block;
+            position: relative;
+            margin: 1.0rem 1.0rem 0 0 ;
+            color: #ffffff;
+            text-align: right;
+        }
+    }
+    .copyright {
+        margin: 0;
+        padding: 2rem 0 0 0;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .main {
+        margin: 0 0 8.0rem;
+        &.fixed {
+            .container {
+                margin: 15.5rem auto 0;
+            }
+        }
+    }
+
+    .container {
+        max-width: 110rem;
+        margin: 8.0rem auto 0;
+        padding: 5rem 3rem;
+        background: #ffffff;
+    }
+
+    // ---------- 共通見出し
+    h2 {
+        font-size: 2.6rem;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            z-index: -1;
+            transform: translateX(-50%);
+            width: calc(30% + 15px);
+            height: 10px;
+            background-color: #30a2ff;
+        }
+    }
+
+    .top {
+        &__backcon {
+            height: 66rem;
+        }
+        &__txtcon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90rem;
+            img {
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+
+    // ---------- メニュー
+    .menu {
+        display: block;
+        background: #ffffff;
+
+        ul {
+            width: 50%;
+            margin: 0 auto;
+            li {
+                flex-basis: 20%;
+                height: 7.5rem;
+                line-height: 7.5rem;
+                a {
+                    display: block;
+                    position: relative;
+                    font-size: 1.6rem;
+                    &:hover {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 1.5rem;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: calc(35% + 20px);
+                            height: 5px;
+                            background-color: #30a2ff;
+                        }
+                    }
+                    &.menuactive {
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            bottom: 1.5rem;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: calc(35% + 20px);
+                            height: 5px;
+                            background-color: #30a2ff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .logo {
+            width: 30.0rem;
+        }
+        .footerbox {
+            display: flex;
+            max-width: 100.0rem;
+            margin: 0 auto;
+            padding: 5rem 2rem 3rem;
+        }
+        .left {
+            width: 60%;
+        }
+        .right {
+            width: 40%;
+        }
+        .left, .right {
+            &__flex {
+                &_h {
+                    width: 20%;
+                }
+                &_bet {
+                    margin: 0 .5rem;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                }
+                &_txt {
+                    width: 80%;
+                }
+            }
+        }
+        .underfooterbox {
+            max-width: 100.0rem;
+            margin: 0 auto;
+        }
+    }
+}

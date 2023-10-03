@@ -1,0 +1,116 @@
+.requirements {
+    margin: 0 0 5rem;
+    padding: 3rem;
+    background: #ffffff;
+
+    &__title {
+        display: block;
+        margin: 0 0 3rem;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        line-height: 1.8;
+        margin: 0 0 3rem;
+        font-size: 1.5rem;
+        text-align: center;
+        strong {
+            margin: 1rem 0;
+            color: #ff2300;
+        }
+    }
+
+
+    *, *:before, *:after {
+                box-sizing: inherit;
+
+        -webkit-box-sizing: inherit;
+    }
+
+    html {
+                box-sizing: border-box;
+        font-size: 62.5%; /*rem算出をしやすくするために*/
+
+        -webkit-box-sizing: border-box;
+    }
+
+    .btn, a.btn, button.btn {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        line-height: 1.5;
+        padding: 1rem 4rem;
+        border-radius: .5rem;
+        color: #212529;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+                transition: all .3s;
+
+        -webkit-user-select: none;
+           -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+        -webkit-transition: all .3s;
+    }
+
+    a.btn-border {
+        border: 2px solid #000000;
+        border-radius: 0;
+        background: #ffffff;
+
+        -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+    }
+
+    a.btn-border:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+                transform: translateX(0) translateY(0);
+        width: 15px;
+        height: 100%;
+        border-radius: 0 50% 50% 0;
+        background: #f57500;
+                transition: all .3s;
+
+        -webkit-transition: all .3s;
+        -webkit-transform: translateX(0) translateY(0);
+    }
+
+    a.btn-border:hover:before {
+        content: "\f061";
+                transform: translateX(835%) translateY(.5rem);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        color: #ffffff;
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+
+        -webkit-transform: translateX(835%) translateY(.5rem);
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 110rem;
+    }
+    .requirements {
+        margin: 0;
+        &__title {
+            font-size: 3rem;
+        }
+        p {
+            margin: 0;
+            font-size: 1.6rem;
+        }
+    }
+}
