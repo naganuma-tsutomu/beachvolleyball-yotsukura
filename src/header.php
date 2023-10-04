@@ -31,7 +31,8 @@
     <meta name="google-site-verification" content="rDkRniiSrOzF_k5ccyGpkrfLe4dCJIARBhFrvuNsvlY" />
 </head>
 
-<div class="main">
+<body>
+    <div class="main">
     <!-- TOP画像 -->
     <div class="top">
         <div class="top__backcon"><img src="<?php echo esc_url(get_theme_file_uri('/images/top01.jpg')); ?>" alt="背景" width="100%" class="top__backcon_pc"></div>
