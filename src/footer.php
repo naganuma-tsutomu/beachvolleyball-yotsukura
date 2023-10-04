@@ -1,6 +1,6 @@
 <footer>
     <div class="logo">
-        <img src="<?php echo esc_url(get_theme_file_uri('/images/top02.png')); ?>" alt="文字" width="100%">
+        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top02.png')); ?>" alt="文字" width="100%">
     </div>
     <div class="footerbox">
         <div class="left">

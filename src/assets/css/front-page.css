@@ -1,0 +1,556 @@
+@charset "UTF-8";
+.introduction {
+  margin: 0 0 5rem;
+}
+.introduction__flex {
+  display: block;
+  padding: 2rem;
+  background: #ffffff;
+}
+.introduction__flex_imgblock {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin: 0 0 2rem;
+}
+.introduction__flex_imgblock img {
+  width: 100%;
+  height: auto;
+}
+.introduction__flex_imgblock .img01 {
+  order: 1;
+}
+.introduction__flex_imgblock .img02 {
+  order: 2;
+}
+.introduction__flex_txtblock {
+  line-height: 1.8;
+  font-size: 1.4rem;
+}
+.introduction__flex_txtblock p {
+  margin: 0 1rem;
+}
+
+.overview {
+  margin: 0 0 5rem;
+}
+.overview table {
+  width: 100%;
+}
+.overview table tr th {
+  min-width: 9rem;
+  padding: 1rem;
+  border: 0.1rem solid #888888;
+  background-color: #f1f1f1;
+  text-align: center;
+  vertical-align: middle;
+}
+.overview table tr td {
+  padding: 1rem;
+  border: 0.1rem solid #888888;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.schedule {
+  margin: 0 0 5rem;
+}
+.schedule__block {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 1.5rem;
+  padding: 1rem 1.5rem;
+  background: #afd3e2;
+}
+.schedule__block_time, .schedule__block_doing {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+.schedule__block_time {
+  width: 30%;
+  font-size: 1.5rem;
+}
+.schedule__block_doing {
+  width: 70%;
+  font-size: 1.8rem;
+}
+.schedule__competition {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 0 auto 1.5rem;
+  padding: 1rem;
+  background: #f57500;
+}
+.schedule__competition::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(20%, -30%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: url(../assets/images/ball.png) center center no-repeat;
+  background-size: cover;
+}
+.schedule__competition_time, .schedule__competition_doing {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+.schedule__competition_time {
+  width: 30%;
+  font-size: 1.8rem;
+}
+.schedule__competition_doing {
+  width: 70%;
+  font-size: 2.4rem;
+}
+
+.requirements {
+  margin: 0 0 5rem;
+}
+.requirements .table {
+  margin: 0 auto 2rem;
+}
+.requirements .table p {
+  margin: 0 1rem 1rem;
+  color: #000000;
+  font-size: 1.4rem;
+}
+.requirements .table table {
+  width: 100%;
+  margin: 2rem 0 0;
+}
+.requirements .table table tr th {
+  min-width: 9rem;
+  padding: 1rem;
+  border: 0.1rem solid #888888;
+  background-color: #f1f1f1;
+  text-align: center;
+  vertical-align: middle;
+}
+.requirements .table table tr td {
+  padding: 1rem;
+  border: 0.1rem solid #888888;
+  background-color: #ffffff;
+  text-align: center;
+}
+.requirements .table table tr td .view_timer {
+  color: #ff2300;
+}
+
+.form {
+  margin: 0 0 5rem;
+}
+.form .participation {
+  width: 100%;
+  margin: 0 0 3rem;
+  padding: 2rem;
+  border: 0.2rem solid #888888;
+  background: #ffffff;
+}
+.form .participation span {
+  display: block;
+  text-align: center;
+}
+.form .participation__title {
+  margin: 1rem;
+  color: #4d4d4d;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.form .participation__shape {
+  margin: 1rem;
+  color: #ff2300;
+  font-size: 5rem;
+  font-weight: bold;
+}
+.form .participation__txt {
+  color: #4d4d4d;
+  font-size: 1.8rem;
+}
+.form__block .representative {
+  margin: 0 0 3rem;
+  padding: 2rem;
+  border: 0.2rem solid #888888;
+  background: #ffffff;
+}
+.form__block .team {
+  padding: 2rem;
+  border: 0.2rem solid #888888;
+  background: #ffffff;
+}
+.form__block .team .btn {
+  position: relative;
+  height: 5rem;
+}
+.form__block .team .btn .wpcf7-spinner {
+  display: none;
+}
+.form__block .team .btn input[type=submit] {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.3rem 0 #000000;
+  background: #f57500;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.form__block .team .btn input[type=submit]:active {
+  opacity: 0.6;
+}
+.form__block .formtitle {
+  margin: 0 0 2rem;
+  padding: 0 0 1rem;
+  border-bottom: 0.2rem solid #888888;
+  color: #19a7ce;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+.form input[type=text], .form input[type=tel], .form input[type=email] {
+  width: 100%;
+  margin: 0.5rem 0 0;
+  padding: 1rem 1rem;
+  border: 0.1rem solid #cccccc;
+  border-radius: 0.4rem;
+  color: #333333;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.form input[type=text]::placeholder, .form input[type=tel]::placeholder, .form input[type=email]::placeholder {
+  opacity: 1;
+  color: #afafaf;
+  font-weight: normal;
+}
+.form .labelbox {
+  margin: 0 0 1.5rem;
+}
+.form .labelbox:last-child {
+  margin: 0;
+}
+.form .labelbox .tomember {
+  margin: 0 0 1.5rem;
+  padding: 0 0 1rem;
+  border-bottom: 0.1rem solid #b3b3b3;
+}
+.form .labelbox .nameblock {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 0;
+}
+.form .labelbox .nameblock__left {
+  width: 48%;
+  margin: 0;
+  color: #888888;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.form .labelbox .memberlabel {
+  display: block;
+  width: 95%;
+  margin: 0 auto 1.5rem;
+  color: #616161;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.form .labelbox .member {
+  margin: 0 auto 2rem;
+  padding: 0;
+  border-bottom: solid 0.1rem #b3b3b3;
+}
+.form .labelbox .member:first-child {
+  margin: 0.5rem 0 4rem;
+}
+.form .labelbox .member .required {
+  color: #ff2300;
+  font-size: 12px;
+}
+.form .labelbox .member .any {
+  color: #0080ff;
+  font-size: 12px;
+}
+.form .labelbox .member .membersex, .form .labelbox .member .referee {
+  display: block;
+}
+.form .labelbox .member .membersex, .form .labelbox .member .memnameblock, .form .labelbox .member .kanamemnameblock {
+  width: 95%;
+  margin: 0 auto 1.5rem;
+}
+.form .labelbox .member .referee {
+  width: 95%;
+  margin: 0 auto 2rem;
+}
+.form .labelbox .member .referee p {
+  margin: 0.5rem 0 0;
+  color: #ff2300;
+  font-size: 1.3rem;
+  font-weight: normal;
+}
+.form .labelbox .member .membersex, .form .labelbox .member .memnameblock__left, .form .labelbox .member .kanamemnameblock__left, .form .labelbox .member .memnameblock__right, .form .labelbox .member .kanamemnameblock__right, .form .labelbox .member .referee {
+  color: #888888;
+  font-size: 14px;
+  font-weight: bold;
+}
+.form .labelbox .member .membersex, .form .labelbox .member .referee {
+  /* 全体の入力欄（input）の角丸変更 */
+}
+.form .labelbox .member .membersex .wpcf7-list-item, .form .labelbox .member .referee .wpcf7-list-item {
+  padding: 1rem !important;
+  border: 0.1rem solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px !important;
+}
+.form .labelbox .member .membersex .wpcf7-list-item.first, .form .labelbox .member .referee .wpcf7-list-item.first {
+  margin: 0.5rem 0 0;
+}
+.form .labelbox .member .membersex .wpcf7-form-control, .form .labelbox .member .referee .wpcf7-form-control {
+  padding: 0 !important;
+}
+.form .labelbox .member .membersex .wpcf7-form-control, .form .labelbox .member .referee .wpcf7-form-control {
+  border-radius: 4px !important;
+}
+.form [data-class=wpcf7cf_group] {
+  display: block !important;
+}
+.form .required {
+  color: #ff2300;
+  font-size: 14px;
+}
+.form .any {
+  color: #0080ff;
+  font-size: 14px;
+}
+.form .label {
+  display: block;
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.form .nameblock, .form .postblock, .form .memnameblock, .form .kanamemnameblock {
+  display: flex;
+  justify-content: space-between;
+}
+.form .nameblock__right, .form .nameblock__left, .form .memnameblock__right, .form .memnameblock__left, .form .kanamemnameblock__right, .form .kanamemnameblock__left {
+  width: 48%;
+  margin: 0;
+  color: #888888;
+  font-size: 14px;
+  font-weight: bold;
+}
+.form .postblock {
+  align-items: center;
+}
+.form .postblock__left {
+  width: 30%;
+  margin: 0;
+  color: #888888;
+  font-size: 14px;
+  font-weight: bold;
+}
+.form .postblock__hyphen {
+  width: 10%;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.form .postblock__right {
+  width: 60%;
+  margin: 0;
+  color: #888888;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1025px) {
+  .introduction {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+  }
+  .introduction__flex {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0 0;
+  }
+  .introduction__flex_imgblock {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    width: 40%;
+    margin: 0;
+  }
+  .introduction__flex_imgblock img {
+    width: 100%;
+    height: auto;
+  }
+  .introduction__flex_imgblock .img02 {
+    order: 2;
+  }
+  .introduction__flex_txtblock {
+    width: 60%;
+    line-height: 1.8;
+    font-size: 1.6rem;
+  }
+  .introduction__flex_txtblock p {
+    margin: 0 0 0 3rem;
+  }
+  .overview {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+  }
+  .overview table {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .schedule {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+  }
+  .schedule__block {
+    padding: 2rem 3rem;
+  }
+  .schedule__block_time {
+    font-size: 2rem;
+  }
+  .schedule__block_doing {
+    font-size: 2.4rem;
+  }
+  .schedule__competition {
+    padding: 2.5rem 3.5rem;
+  }
+  .schedule__competition::before {
+    content: "";
+    right: -7%;
+    transform: translate(0, -43%);
+    width: 130px;
+    height: 130px;
+  }
+  .schedule__competition_time {
+    font-size: 2.4rem;
+  }
+  .schedule__competition_doing {
+    font-size: 2.8rem;
+  }
+  .requirements {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+  }
+  .requirements .table {
+    margin: 0 auto 3rem;
+  }
+  .requirements .table p {
+    font-size: 1.5rem;
+  }
+  .requirements .table table {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+  .requirements .table table tr th {
+    min-width: 16rem;
+  }
+  .form {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+  }
+  .form__block .representative {
+    margin: 0 0 3rem;
+    padding: 4rem;
+    border: 0.2rem solid #888888;
+    background: #ffffff;
+  }
+  .form__block .team {
+    padding: 4rem;
+    border: 0.2rem solid #888888;
+    background: #ffffff;
+  }
+  .form__block .team .btn input[type=submit] {
+    width: 40%;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+  }
+  .form__block .team .btn input[type=submit]:hover {
+    opacity: 0.6;
+  }
+  .form__block .formtitle {
+    font-size: 2.2rem;
+  }
+  .form .labelbox .nameblock__left {
+    font-size: 1.4rem;
+  }
+  .form .labelbox .member:last-child {
+    margin: 0 auto 3rem;
+  }
+  .form .labelbox .member .required {
+    color: #ff2300;
+    font-size: 14px;
+  }
+  .form .labelbox .member .any {
+    color: #0080ff;
+    font-size: 14px;
+  }
+  .form .required {
+    color: #ff2300;
+    font-size: 1.4rem;
+  }
+  .form .any {
+    color: #0080ff;
+    font-size: 1.4rem;
+  }
+  .form .label {
+    font-size: 1.8rem;
+  }
+  .form .memberlabel {
+    font-size: 1.6rem;
+  }
+  .form .nameblock__right, .form .nameblock__left, .form .postblock__left, .form .postblock__right, .form .memnameblock__right, .form .memnameblock__left, .form .kanamemnameblock__right, .form .kanamemnameblock__left {
+    font-size: 1.4rem;
+  }
+  .form .membersex, .form .memnameblock__left, .form .kanamemnameblock__left, .form .memnameblock__right, .form .kanamemnameblock__right {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+  }
+  .form .membersex .wpcf7-list-item {
+    font-size: 1.6rem !important;
+  }
+  .form .postblock {
+    width: 30%;
+  }
+  .form .postblock__left {
+    width: 30%;
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .form .postblock__hyphen {
+    width: 10%;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .form .postblock__right {
+    width: 60%;
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+/*# sourceMappingURL=front-page.css.map */

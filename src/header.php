@@ -35,8 +35,8 @@
     <div class="main">
     <!-- TOP画像 -->
     <div class="top">
-        <div class="top__backcon"><img src="<?php echo esc_url(get_theme_file_uri('/images/top01.jpg')); ?>" alt="背景" width="100%" class="top__backcon_pc"></div>
-        <div class="top__txtcon"><img src="<?php echo esc_url(get_theme_file_uri('/images/top02.png')); ?>" alt="文字" width="100%" class="">
+        <div class="top__backcon"><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top01.jpg')); ?>" alt="背景" width="100%" class="top__backcon_pc"></div>
+        <div class="top__txtcon"><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top02.png')); ?>" alt="文字" width="100%" class="">
         </div>
     </div>
 

@@ -8,7 +8,7 @@
         <h2>はじめに</h2>
         <div class="introduction__flex">
             <div class="introduction__flex_imgblock">
-                <img src="<?php echo esc_url(get_theme_file_uri('/images/beachvalley02.jpg')); ?>" alt="紹介画像02" class="img02" width="100%">
+                <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/beachvalley02.jpg')); ?>" alt="紹介画像02" class="img02" width="100%">
             </div>
             <div class="introduction__flex_txtblock">
                 <p>

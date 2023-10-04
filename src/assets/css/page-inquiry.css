@@ -1,0 +1,212 @@
+@charset "UTF-8";
+.inquiry__block {
+  padding: 2rem;
+  border: 0.2rem solid #888888;
+  background: #ffffff;
+}
+.inquiry input[type=text], .inquiry input[type=tel], .inquiry input[type=email], .inquiry .wpcf7-textarea {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 1rem 1rem;
+  border: 0.1rem solid #cccccc;
+  border-radius: 0.4rem;
+  color: #333333;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+.inquiry input[type=text]::placeholder, .inquiry input[type=tel]::placeholder, .inquiry input[type=email]::placeholder, .inquiry .wpcf7-textarea::placeholder {
+  opacity: 1;
+  color: #afafaf;
+  font-weight: normal;
+}
+.inquiry .btn {
+  position: relative;
+  height: 5rem;
+}
+.inquiry .btn .wpcf7-spinner {
+  display: none;
+}
+.inquiry .btn input[type=submit] {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0.3rem 0 #000000;
+  background: #f57500;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+.inquiry .btn input[type=submit]:active {
+  opacity: 0.6;
+}
+.inquiry .labelbox {
+  margin: 0 0 1.5rem;
+}
+.inquiry .labelbox .nameblock {
+  display: flex;
+  justify-content: space-between;
+}
+.inquiry .labelbox .nameblock__left {
+  width: 48%;
+  margin: 0;
+  color: #888888;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.inquiry .labelbox .member {
+  margin: 0 0 2rem;
+  padding: 15px 0;
+  border-top: solid 2px #888888;
+  border-bottom: solid 2px #888888;
+}
+.inquiry .labelbox .member .required {
+  color: #ff2300;
+  font-size: 12px;
+}
+.inquiry .labelbox .member .any {
+  color: #0080ff;
+  font-size: 12px;
+}
+.inquiry [data-class=wpcf7cf_group] {
+  display: block !important;
+}
+.inquiry .required {
+  color: #ff2300;
+  font-size: 14px;
+}
+.inquiry .any {
+  color: #0080ff;
+  font-size: 14px;
+}
+.inquiry .label {
+  display: block;
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.inquiry .memberlabel {
+  display: block;
+  margin: 0 10px 10px 0;
+  color: #888888;
+  font-size: 14px;
+  font-weight: bold;
+}
+.inquiry .nameblock, .inquiry .memnameblock, .inquiry .kanamemnameblock {
+  display: flex;
+  justify-content: space-between;
+}
+.inquiry .nameblock__right, .inquiry .nameblock__left, .inquiry .memnameblock__right, .inquiry .memnameblock__left, .inquiry .kanamemnameblock__right, .inquiry .kanamemnameblock__left {
+  width: 48%;
+  margin: 0;
+  color: #888888;
+  font-size: 14px;
+  font-weight: bold;
+}
+.inquiry .membersex, .inquiry .memnameblock__left, .inquiry .kanamemnameblock__left, .inquiry .memnameblock__right, .inquiry .kanamemnameblock__right {
+  margin: 0 0 5px;
+  color: #888888;
+  font-size: 14px;
+  font-weight: bold;
+}
+.inquiry .membersex {
+  /* 全体の入力欄（input）の角丸変更 */
+}
+.inquiry .membersex .wpcf7-list-item {
+  padding: 1rem !important;
+  border: 0.1rem solid #cccccc;
+  border-radius: 4px;
+  font-size: 14px !important;
+}
+.inquiry .membersex .wpcf7-list-item.first {
+  margin: 0.5rem 0;
+}
+.inquiry .membersex .wpcf7-form-control {
+  padding: 0 !important;
+}
+.inquiry .membersex .wpcf7-form-control {
+  border-radius: 4px !important;
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    max-width: 100rem;
+    margin: 8rem auto 0;
+    padding: 5rem 3rem;
+    background: #ffffff;
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+  h2::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+    width: calc(30% + 15px);
+    height: 10px;
+    background-color: #30a2ff;
+  }
+  .inquiry {
+    max-width: 80rem;
+    margin: 0 auto 3rem;
+  }
+  .inquiry .textbox p {
+    font-size: 1.5rem;
+  }
+  .inquiry__block {
+    padding: 4rem;
+  }
+  .inquiry .btn input[type=submit] {
+    width: 40%;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+  }
+  .inquiry .btn input[type=submit]:hover {
+    opacity: 0.6;
+  }
+  .inquiry .labelbox .nameblock__left {
+    font-size: 1.4rem;
+  }
+  .inquiry .labelbox .member .required {
+    color: #ff2300;
+    font-size: 14px;
+  }
+  .inquiry .labelbox .member .any {
+    color: #0080ff;
+    font-size: 14px;
+  }
+  .inquiry .required {
+    color: #ff2300;
+    font-size: 1.4rem;
+  }
+  .inquiry .any {
+    color: #0080ff;
+    font-size: 1.4rem;
+  }
+  .inquiry .label {
+    font-size: 1.8rem;
+  }
+  .inquiry .memberlabel {
+    font-size: 1.6rem;
+  }
+  .inquiry .nameblock__right, .inquiry .nameblock__left, .inquiry .memnameblock__right, .inquiry .memnameblock__left, .inquiry .kanamemnameblock__right, .inquiry .kanamemnameblock__left {
+    font-size: 1.4 rem;
+  }
+  .inquiry .membersex, .inquiry .memnameblock__left, .inquiry .kanamemnameblock__left, .inquiry .memnameblock__right, .inquiry .kanamemnameblock__right {
+    margin: 0 0 1rem;
+    font-size: 1.4rem;
+  }
+  .inquiry .membersex .wpcf7-list-item {
+    font-size: 1.6rem !important;
+  }
+}
+/*# sourceMappingURL=page-inquiry.css.map */
