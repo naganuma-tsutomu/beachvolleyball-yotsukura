@@ -1,0 +1,679 @@
+// ---------- ビーチバレーボールよつくら大会とは
+.introduction {
+  margin: 0 0 5rem;
+  &__flex {
+    display: block;
+    padding: 2rem;
+    background: #ffffff;
+    &_imgblock {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      width: 100%;
+      margin: 0 0 2rem;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .img01 {
+        order: 1;
+      }
+      .img02 {
+        order: 2;
+      }
+    }
+    &_txtblock {
+      line-height: 1.8;
+      font-size: 1.4rem;
+      p {
+        margin: 0 1rem;
+      }
+    }
+  }
+}
+
+// ---------- 大会概要
+.overview {
+  margin: 0 0 5rem;
+  table {
+    width: 100%;
+    tr {
+      th {
+        min-width: 9rem;
+        padding: 1rem;
+        border: 0.1rem solid #888888;
+        background-color: #f1f1f1;
+        text-align: center;
+        vertical-align: middle;
+      }
+      td {
+        padding: 1rem;
+        border: 0.1rem solid #888888;
+        background-color: #ffffff;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// ------------ 予定表
+.schedule {
+  margin: 0 0 5rem;
+  &__block {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto 1.5rem;
+    padding: 1rem 1.5rem;
+    background: #afd3e2;
+    &_time,
+    &_doing {
+      color: #ffffff;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+    }
+    &_time {
+      width: 30%;
+      font-size: 1.5rem;
+    }
+    &_doing {
+      width: 70%;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__competition {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background: #f57500;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(20%, -30%);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: url(../images/ball.png) center center no-repeat;
+      background-size: cover;
+    }
+    &_time,
+    &_doing {
+      color: #ffffff;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+    }
+    &_time {
+      width: 30%;
+      font-size: 1.8rem;
+    }
+    &_doing {
+      width: 70%;
+      font-size: 2.4rem;
+    }
+  }
+}
+
+// ------------ 参加要項
+.requirements {
+  margin: 0 0 5rem;
+  .table {
+    margin: 0 auto 2rem;
+    p {
+      margin: 0 1rem 1rem;
+      color: #000000;
+      font-size: 1.4rem;
+    }
+
+    table {
+      width: 100%;
+      margin: 2rem 0 0;
+      tr {
+        th {
+          min-width: 9rem;
+          padding: 1rem;
+          border: 0.1rem solid #888888;
+          background-color: #f1f1f1;
+          text-align: center;
+          vertical-align: middle;
+        }
+
+        td {
+          padding: 1rem;
+          border: 0.1rem solid #888888;
+          background-color: #ffffff;
+          text-align: center;
+          .view_timer {
+            color: #ff2300;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------ 参加申込
+.form {
+  margin: 0 0 5rem;
+
+  .participation {
+    width: 100%;
+    margin: 0 0 3rem;
+    padding: 2rem;
+    border: 0.2rem solid #888888;
+    background: #ffffff;
+
+    span {
+      display: block;
+      text-align: center;
+    }
+
+    &__title {
+      margin: 1rem;
+      color: #4d4d4d;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    &__shape {
+      margin: 1rem;
+      color: #ff2300;
+      font-size: 5rem;
+      font-weight: bold;
+    }
+    &__txt {
+      color: #4d4d4d;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__block {
+    .representative {
+      margin: 0 0 3rem;
+      padding: 2rem;
+      border: 0.2rem solid #888888;
+      background: #ffffff;
+    }
+
+    .team {
+      padding: 2rem;
+      border: 0.2rem solid #888888;
+      background: #ffffff;
+
+      // 入力内容確認ボタンの装飾
+      .btn {
+        position: relative;
+        height: 5rem;
+
+        // 読み込みのアニメーションの非表示
+        .wpcf7-spinner {
+          display: none;
+        }
+
+        input[type="submit"] {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 60%;
+          margin: 0 auto;
+          padding: 1rem;
+          border-radius: 0.4rem;
+          box-shadow: 0 0.3rem 0 #000000;
+          background: #f57500;
+          color: #ffffff;
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-align: center;
+          &:active {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+
+    // フォーム内の共通見出し
+    .formtitle {
+      margin: 0 0 2rem;
+      padding: 0 0 1rem;
+      border-bottom: 0.2rem solid #888888;
+      color: #19a7ce;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  // フォーム場の入力欄の共通css
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    padding: 1rem 1rem;
+    border: 0.1rem solid #cccccc;
+    border-radius: 0.4rem;
+    color: #333333;
+    font-size: 1.4rem;
+    font-weight: normal;
+    &::placeholder {
+      opacity: 1;
+      color: #afafaf;
+      font-weight: normal;
+    }
+  }
+
+  .labelbox {
+    margin: 0 0 1.5rem;
+    &:last-child {
+      margin: 0;
+    }
+    .tomember {
+      margin: 0 0 1.5rem;
+      padding: 0 0 1rem;
+      border-bottom: 0.1rem solid #b3b3b3;
+    }
+    .nameblock {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0 0;
+      &__left {
+        width: 48%;
+        margin: 0;
+        color: #888888;
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+    }
+
+    .memberlabel {
+      display: block;
+      width: 95%;
+      margin: 0 auto 1.5rem;
+      color: #616161;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    // メンバー
+    .member {
+      margin: 0 auto 2rem;
+      padding: 0;
+      border-bottom: solid 0.1rem #b3b3b3;
+      &:first-child {
+        margin: 0.5rem 0 4rem;
+      }
+      .required {
+        color: #ff2300;
+        font-size: 12px;
+      }
+
+      .any {
+        color: #0080ff;
+        font-size: 12px;
+      }
+
+      .membersex,
+      .referee {
+        display: block;
+      }
+
+      .membersex,
+      .memnameblock,
+      .kanamemnameblock {
+        width: 95%;
+        margin: 0 auto 1.5rem;
+      }
+
+      .referee {
+        width: 95%;
+        margin: 0 auto 2rem;
+        p {
+          margin: 0.5rem 0 0;
+          color: #ff2300;
+          font-size: 1.3rem;
+          font-weight: normal;
+        }
+      }
+
+      .membersex,
+      .memnameblock__left,
+      .kanamemnameblock__left,
+      .memnameblock__right,
+      .kanamemnameblock__right,
+      .referee {
+        color: #888888;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      // radioボタンのデザイン変更
+      .membersex,
+      .referee {
+        .wpcf7-list-item {
+          padding: 1rem !important;
+          border: 0.1rem solid #cccccc;
+          border-radius: 4px;
+          font-size: 14px !important;
+        }
+        .wpcf7-list-item.first {
+          margin: 0.5rem 0 0;
+        }
+        .wpcf7-form-control {
+          padding: 0 !important;
+        }
+        /* 全体の入力欄（input）の角丸変更 */
+        .wpcf7-form-control {
+          border-radius: 4px !important;
+        }
+      }
+    }
+  }
+
+  // 自動で非表示になってしまうので強制的に表示
+  [data-class="wpcf7cf_group"] {
+    display: block !important;
+  }
+
+  .required {
+    color: #ff2300;
+    font-size: 14px;
+  }
+
+  .any {
+    color: #0080ff;
+    font-size: 14px;
+  }
+
+  .label {
+    display: block;
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .nameblock,
+  .postblock,
+  .memnameblock,
+  .kanamemnameblock {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nameblock__right,
+  .nameblock__left,
+  .memnameblock__right,
+  .memnameblock__left,
+  .kanamemnameblock__right,
+  .kanamemnameblock__left {
+    width: 48%;
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .postblock {
+    align-items: center;
+  }
+
+  .postblock__left {
+    width: 30%;
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .postblock__hyphen {
+    width: 10%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .postblock__right {
+    width: 60%;
+    margin: 0;
+    color: #888888;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+// ------------------------------ PC
+
+@media screen and (min-width: 1025px) {
+  // ---------- ビーチバレーボールよつくら大会とは
+  .introduction {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+    &__flex {
+      display: flex;
+      align-items: center;
+      padding: 2rem 0 0;
+      &_imgblock {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        width: 40%;
+        margin: 0;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        .img02 {
+          order: 2;
+        }
+      }
+      &_txtblock {
+        width: 60%;
+        line-height: 1.8;
+        font-size: 1.6rem;
+        p {
+          margin: 0 0 0 3rem;
+        }
+      }
+    }
+  }
+
+  // ---------- 大会概要
+  .overview {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+    table {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  }
+
+  // ------------ 予定表
+  .schedule {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+    &__block {
+      padding: 2rem 3rem;
+      &_time {
+        font-size: 2rem;
+      }
+      &_doing {
+        font-size: 2.4rem;
+      }
+    }
+    &__competition {
+      padding: 2.5rem 3.5rem;
+
+      &::before {
+        content: "";
+        right: -7%;
+        transform: translate(0, -43%);
+        width: 130px;
+        height: 130px;
+      }
+      &_time {
+        font-size: 2.4rem;
+      }
+      &_doing {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  // ------------ 参加要項
+  .requirements {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+    .table {
+      margin: 0 auto 3rem;
+      p {
+        font-size: 1.5rem;
+      }
+      table {
+        font-size: 1.6rem;
+        font-weight: bold;
+        tr {
+          th {
+            min-width: 16rem;
+          }
+        }
+      }
+    }
+  }
+
+  // ------------ 参加申込
+  .form {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+
+    &__block {
+      .representative {
+        margin: 0 0 3rem;
+        padding: 4rem;
+        border: 0.2rem solid #888888;
+        background: #ffffff;
+      }
+
+      .team {
+        padding: 4rem;
+        border: 0.2rem solid #888888;
+        background: #ffffff;
+
+        // 入力内容確認ボタンの装飾
+        .btn {
+          input[type="submit"] {
+            width: 40%;
+            padding: 1.5rem 2rem;
+            font-size: 1.5rem;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      // フォーム内の共通見出し
+      .formtitle {
+        font-size: 2.2rem;
+      }
+    }
+
+    .labelbox {
+      .nameblock {
+        &__left {
+          font-size: 1.4rem;
+        }
+      }
+
+      // メンバー
+      .member {
+        &:last-child {
+          margin: 0 auto 3rem;
+        }
+        .required {
+          color: #ff2300;
+          font-size: 14px;
+        }
+
+        .any {
+          color: #0080ff;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .required {
+      color: #ff2300;
+      font-size: 1.4rem;
+    }
+
+    .any {
+      color: #0080ff;
+      font-size: 1.4rem;
+    }
+
+    .label {
+      font-size: 1.8rem;
+    }
+
+    .memberlabel {
+      font-size: 1.6rem;
+    }
+
+    .nameblock__right,
+    .nameblock__left,
+    .postblock__left,
+    .postblock__right,
+    .memnameblock__right,
+    .memnameblock__left,
+    .kanamemnameblock__right,
+    .kanamemnameblock__left {
+      font-size: 1.4rem;
+    }
+
+    .membersex,
+    .memnameblock__left,
+    .kanamemnameblock__left,
+    .memnameblock__right,
+    .kanamemnameblock__right {
+      margin: 0 0 1rem;
+      font-size: 1.4rem;
+    }
+
+    .membersex {
+      .wpcf7-list-item {
+        font-size: 1.6rem !important;
+      }
+    }
+    .postblock {
+      width: 30%;
+    }
+
+    .postblock__left {
+      width: 30%;
+      margin: 0;
+      color: #888888;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .postblock__hyphen {
+      width: 10%;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .postblock__right {
+      width: 60%;
+      margin: 0;
+      color: #888888;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
