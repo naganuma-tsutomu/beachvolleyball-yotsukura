@@ -20,6 +20,9 @@ add_action('wp_enqueue_scripts', function () {
 
   if (is_front_page()) {
     wp_enqueue_style('front-page', get_theme_file_uri('/assets/css/front-page-style.css'), array(), null, 'all');
+    wp_enqueue_style('slick', get_theme_file_uri('/assets/css/lib/slick.css'), array(), null, 'all');
+    wp_enqueue_style('slick-theme', get_theme_file_uri('/assets/css/lib/slick-theme.css'), array(), null, 'all');
+    wp_enqueue_script('slick', get_theme_file_uri('/assets/js/library/slick.min.js'), array(), '3.6.0', true);
     wp_enqueue_script('front-page-js', get_theme_file_uri('/assets/js/front-page.js'), array('jquery'), null, true);
   }
 
