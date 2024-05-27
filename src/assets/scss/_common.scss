@@ -24,7 +24,6 @@ body {
             z-index: 2;
             width: 100%;
             box-shadow: 0 0 6px 0 rgba(0, 0, 0, .24);
-            background-color: #ffffff;
         }
         .container {
             margin: 7.5rem auto 0;
@@ -57,10 +56,10 @@ body {
         }
     }
 }
-
 // ---------- メニュー
 .menu {
     display: block;
+    background-color: #ffffff;
 
     ul {
         display: flex;
@@ -212,10 +211,7 @@ footer {
     }
 
     .container {
-        max-width: 110rem;
         margin: 8.0rem auto 0;
-        padding: 5rem 3rem;
-        background: #ffffff;
     }
 
     // ---------- 共通見出し

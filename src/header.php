@@ -33,19 +33,21 @@
 
 <body>
     <div class="main">
-    <!-- TOP画像 -->
-    <div class="top">
-        <div class="top__backcon"><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top01.jpg')); ?>" alt="背景" width="100%" class="top__backcon_pc"></div>
-        <div class="top__txtcon"><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top02.png')); ?>" alt="文字" width="100%" class="">
-        </div>
-    </div>
+        <?php if (is_front_page()) : ?>
+            <?php /* TOP画像 */ ?>
+            <div class="top">
+                <div class="top__backcon"><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top01.jpg')); ?>" alt="背景" width="100%" class="top__backcon_pc"></div>
+                <div class="top__txtcon"><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top02.png')); ?>" alt="文字" width="100%" class="">
+                </div>
+            </div>
+        <?php endif; ?>
 
-    <!-- メニュー -->
-    <div class="menu">
-        <ul>
-            <li><a href="<?php echo esc_url(home_url('/')); ?>" class="menu-top">TOP</a></li>
-            <li><a href="<?php echo esc_url(home_url('/requirements')); ?>" class="menu-requirements">大会要項</a></li>
-            <li><a href="<?php echo esc_url(home_url('/inquiry')); ?>" class="menu-inquiry">お問い合わせ</a></li>
-            <?php /* <li><a href="">協賛一覧</a></li> */ ?>
-        </ul>
-    </div>
+        <?php /* メニュー */ ?>
+        <div class="menu">
+            <ul>
+                <li><a href="<?php echo esc_url(home_url('/')); ?>" class="menu-top">TOP</a></li>
+                <li><a href="<?php echo esc_url(home_url('/#archives')); ?>" class="menu-requirements">大会一覧</a></li>
+                <li><a href="<?php echo esc_url(home_url('/inquiry')); ?>" class="menu-inquiry">お問い合わせ</a></li>
+                <?php /* <li><a href="">協賛一覧</a></li> */ ?>
+            </ul>
+        </div>

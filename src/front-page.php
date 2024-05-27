@@ -1,9 +1,16 @@
 <?php get_header(); ?>
 
+<?php
+$data = get_posts('post_type=post&posts_per_page=1');
+if (isset($data[0])) {
+    $current_link = get_permalink($data[0]->ID);
+}
+?>
 
 <div class="container flont">
     <?php /* ビーチバレーボールよつくら大会とは */ ?>
     <div class="introduction">
+        <h1><span>ビーチバレーボール</span><span>よつくら大会</span></h1>
         <p class="introduction__text">
             <span>ビーチバレーボールよつくら大会は、</span>
             <span>いわき市四倉町で開催されるビーチバレーボール大会です。</span>
@@ -24,8 +31,8 @@
     </div>
     <?php /* メインリンク */ ?>
     <div class="mainlink">
-        <a class="mainlink__button" href="#">大会概要</a>
-        <a class="mainlink__button" href="#">申し込み</a>
+        <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
+        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
     </div>
     <?php /* 大会会場 */ ?>
     <div class="place">
@@ -40,46 +47,61 @@
             </div>
         </div>
     </div>
+    <?php /* メインリンク */ ?>
+    <div class="mainlink">
+        <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
+        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
+    </div>
     <?php /* 試合風景 */ ?>
     <div class="slide">
         <h2>試合風景</h2>
         <ul class="slide-items">
-            <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/place.jpg')); ?>" alt=""></li>
-            <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/place.jpg')); ?>" alt=""></li>
-            <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/place.jpg')); ?>" alt=""></li>
+            <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/match_scenery_01.jpg')); ?>" alt=""></li>
+            <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/match_scenery_02.jpg')); ?>" alt=""></li>
+            <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/match_scenery_03.jpg')); ?>" alt=""></li>
+            <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/match_scenery_04.jpg')); ?>" alt=""></li>
+            <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/match_scenery_05.jpg')); ?>" alt=""></li>
+            <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/match_scenery_06.jpg')); ?>" alt=""></li>
         </ul>
     </div>
 
     <?php /* メインリンク */ ?>
     <div class="mainlink">
-        <a class="mainlink__button" href="#">大会概要</a>
-        <a class="mainlink__button" href="#">申し込み</a>
+        <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
+        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
     </div>
 
     <?php /* 大会一覧 */ ?>
-    <div class="archives">
-        <h2>大会一覧</h2>
-        <ul class="tournament">
-            <li class="tournament__list">
-                <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/place.jpg')); ?>" alt="">
-                <span>2024年</span>
-            </li>
-            <li class="tournament__list">
-                <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/place.jpg')); ?>" alt="">
-                <span>2023年</span>
-            </li>
-            <li class="tournament__list">
-                <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/place.jpg')); ?>" alt="">
-                <span>2022年</span>
-            </li>
-        </ul>
-    </div>
+    <?php
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+    );
+    $query = new WP_Query($args);
+    ?>
+    <?php if ($query->have_posts()) : ?>
+        <div id="archives" class="archives">
+            <h2>大会一覧</h2>
+            <ul class="tournament">
+                <?php while ($query->have_posts()) : $query->the_post(); ?>
+                    <li class="tournament__list">
+                        <a class="tournament__list_link" href="<?php the_permalink(); ?>">
+                            <img src="<?php echo esc_url(get_field('main_img')); ?>" alt="">
+                            <span><?php the_field('fiscal_year'); ?></span>
+                        </a>
+                    </li>
+                <?php endwhile;
+                wp_reset_postdata(); ?>
+            </ul>
+        </div>
 
-    <?php /* メインリンク */ ?>
-    <div class="mainlink">
-        <a class="mainlink__button" href="#">大会概要</a>
-        <a class="mainlink__button" href="#">申し込み</a>
-    </div>
+
+        <?php /* メインリンク */ ?>
+        <div class="mainlink">
+            <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
+        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
+        </div>
+    <?php endif; ?>
 
     <!-- 参加要項 -->
     <!-- <div class="requirements">

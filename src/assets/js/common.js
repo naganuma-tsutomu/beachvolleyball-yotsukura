@@ -12,6 +12,11 @@ $(function () {
   });
 });
 
+
+
+
+
+
 $(window).on("load", function () {
   // URLを取得
   const currentUrl = location.href;

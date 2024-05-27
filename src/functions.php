@@ -15,8 +15,7 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_script('timer', get_theme_file_uri('/assets/js/view_timer.js'), array(), null, true);
 
 
-  wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-  wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/style.css', array('parent-style'));
+  wp_enqueue_style('main-style', get_theme_file_uri('/assets/css/style.css'), array(), null, 'all');
 
   if (is_front_page()) {
     wp_enqueue_style('front-page', get_theme_file_uri('/assets/css/front-page-style.css'), array(), null, 'all');
@@ -45,5 +44,10 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('inquiry-confirm', get_theme_file_uri('/assets/css/page-inquiry-confirm.css'), array(), null, 'all');
   } else if (is_page('inquiry-thanks')) {
     wp_enqueue_style('inquiry-thanks', get_theme_file_uri('/assets/css/page-inquiry-thanks.css'), array(), null, 'all');
+  }
+
+  // シングルページ
+  else if (is_single()) {
+    wp_enqueue_style('single', get_theme_file_uri('/assets/css/single.css'), array(), null, 'all');
   }
 });

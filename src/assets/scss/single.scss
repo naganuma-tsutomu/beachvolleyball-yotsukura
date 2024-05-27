@@ -1,5 +1,15 @@
-// ---------- ビーチバレーボールよつくら大会とは
-.introduction {
+@use "var" as *;
+.single {
+  width: 90%;
+  margin: 3rem auto 0;
+  // ---------- ビーチバレーボールよつくら大会とは
+  .introduction {
+    h1 {
+      @include head1(75rem);
+      span{
+        display: inline-block;
+      }
+    }
     margin: 0 0 5rem;
     &__flex {
       display: block;
@@ -35,6 +45,12 @@
 
   // ---------- 大会概要
   .overview {
+    h2 {
+      @include head2();
+    }
+    span{
+      display: inline-block;
+    }
     margin: 0 0 5rem;
     table {
       width: 100%;
@@ -59,6 +75,9 @@
 
   // ------------ 予定表
   .schedule {
+    h2 {
+      @include head2();
+    }
     margin: 0 0 5rem;
     &__block {
       display: flex;
@@ -125,6 +144,9 @@
 
   // ------------ 参加要項
   .requirements {
+    h2 {
+      @include head2();
+    }
     margin: 0 0 5rem;
     .table {
       margin: 0 auto 2rem;
@@ -163,6 +185,9 @@
 
   // ------------ 参加申込
   .form {
+    h2 {
+      @include head2();
+    }
     margin: 0 0 5rem;
 
     .participation {
@@ -448,6 +473,13 @@
     }
   }
 
+    // ---------- 大会概要
+    .mainlink {
+      &__button {
+        @include btn($btn-color);
+      }
+    }
+
   // ------------------------------ PC
 
   @media screen and (min-width: 1025px) {
@@ -459,6 +491,7 @@
         display: flex;
         align-items: center;
         padding: 2rem 0 0;
+        background-color: transparent;
         &_imgblock {
           display: flex;
           justify-content: space-between;
@@ -677,3 +710,4 @@
       }
     }
   }
+}
