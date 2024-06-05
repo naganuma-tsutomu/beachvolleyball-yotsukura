@@ -1,8 +1,11 @@
+@use "var" as *;
 // ------------ 参加申込
 .inquiry {
+    h2{
+        @include head2();
+    }
     &__block {
         padding: 2rem;
-        border: .2rem solid #888888;
         background: #ffffff;
     }
 
@@ -43,7 +46,6 @@
             margin: 0 auto;
             padding: 1rem;
             border-radius: .4rem;
-            box-shadow: 0 .3rem 0 #000000;
             background: #f57500;
             color: #ffffff;
             font-size: 1.5rem;
@@ -162,41 +164,26 @@
 @media screen and (min-width: 1025px) {
     .container {
         max-width: 100rem;
-        margin: 8.0rem auto 0;
+        margin: 4rem auto 0;
         padding: 5.0rem 3.0rem;
         background: #ffffff;
-    }
-
-    // ---------- 共通見出し
-    h2 {
-        font-size: 2.6rem;
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            z-index: -1;
-            transform: translateX(-50%);
-            width: calc(30% + 15px);
-            height: 10px;
-            background-color: #30a2ff;
-        }
     }
 
     // ------------ 参加申込
     .inquiry {
         max-width: 80rem;
-        margin: 0 auto 3rem;
+        margin: 0 auto;
         .textbox {
             p {
                 font-size: 1.5rem;
             }
         }
         &__block {
-            padding: 4rem;
+            padding: 4rem 4rem 0;
         }
         // 入力内容確認ボタンの装飾
         .btn {
+            margin-top: 3rem;
             input[type="submit"] {
                 width: 40%;
                 padding: 1.5rem 2rem;

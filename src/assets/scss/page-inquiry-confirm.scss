@@ -1,14 +1,14 @@
+@use "var" as *;
 .main {
     margin: 0;
 }
 
-.container {
-    margin: 3.0rem auto 5.0rem;
+h2{
+    @include head2();
 }
 
 .confirmblock {
     padding: 2rem;
-    border: .2rem solid #888888;
     background: #ffffff;
     &__box {
         margin: 0 0 2rem;
@@ -100,12 +100,11 @@
     .btngroup {
         display: flex;
         justify-content: space-between;
-        a {
+        input[type="button"] {
             display: block;
             width: 45%;
             padding: 1rem;
             border-radius: .4rem;
-            box-shadow: 0 .3rem 0 #000000;
             background: #cccccc;
             color: #000000;
             font-size: 1.5rem;
@@ -120,13 +119,15 @@
             width: 45%;
             padding: 1rem;
             border-radius: .4rem;
-            box-shadow: 0 .3rem 0 #000000;
             background: #f57500;
             color: #ffffff;
             font-size: 1.5rem;
             font-weight: bold;
             text-align: center;
             &:active {
+                opacity: .6;
+            }
+            &:disabled{
                 opacity: .6;
             }
         }
@@ -144,7 +145,7 @@
 @media screen and (min-width: 1025px) {
     .container {
         max-width: 80.0rem;
-        margin: 8.0rem auto;
+        margin: 4rem auto 8rem;
     }
 
     .confirmblock {
@@ -181,7 +182,6 @@
             }
         }
         input[type="submit"] {
-            margin: 0 5.0rem;
             &:hover {
                 opacity: .6;
             }

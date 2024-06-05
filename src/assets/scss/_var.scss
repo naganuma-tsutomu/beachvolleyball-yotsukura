@@ -1,0 +1,89 @@
+// Break point
+@mixin breakpoint($point) {
+  @if $point == sp {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $point == tab {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $point == pc {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  }
+}
+
+// 文字色
+$color: #303030;
+// 背景色
+$bg-color: #f6f1f1;
+// ボタン色
+$btn-color: #ff9233;
+// サブ色
+$sub-color: #cccccc;
+// headerの高さ sp
+$head-height-sp: 6rem;
+// headerの高さ pc
+$head-height-pc: 12rem;
+
+// 共通見出し
+@mixin head1($width) {
+  position: relative;
+  margin: 0 0 5rem;
+  font-size: 2.6rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -0.7rem;
+    transform: translateX(-50%);
+    width: $width;
+    max-width: 95%;
+    height: 0.5rem;
+    background-color: #19a7ce;
+  }
+}
+// 共通見出し
+@mixin head2() {
+  position: relative;
+  margin: 0 0 5rem;
+  font-size: 2.6rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -0.7rem;
+    transform: translateX(-50%);
+    width: 25rem;
+    height: 0.5rem;
+    background-color: #19a7ce;
+  }
+}
+
+@mixin btn($var) {
+  display: block;
+  text-align: center;
+  line-height: 4.5rem;
+  width: 25rem;
+  margin-inline: auto;
+  border: 0.3rem solid $var;
+  border-radius: 3rem;
+  color: $var;
+  font-weight: bold;
+  transition: all .2s ease;
+  &:hover{
+    transform: translateY(-.5rem);
+  }
+}

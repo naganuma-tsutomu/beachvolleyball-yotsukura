@@ -1,0 +1,225 @@
+@use "var" as *;
+.front {
+  // ---------- ビーチバレーボールよつくら大会とは
+  .introduction {
+    margin: 5rem 0 5rem 0;
+    h1 {
+      @include head1(50rem);
+      span {
+        display: inline-block;
+      }
+    }
+    &__text {
+      margin: 0 auto 3rem;
+      padding: 0 3rem;
+      max-width: 55rem;
+      text-align: left;
+      letter-spacing: 0.2rem;
+
+      span {
+        display: inline-block;
+      }
+    }
+  }
+
+  // ---------- 大会概要
+  .mainlink {
+    display: grid;
+    gap: 2rem;
+    &__button {
+      @include btn($btn-color);
+    }
+  }
+
+  // ------------ 大会会場
+  .place {
+    margin: 7rem 0 5rem;
+    h2 {
+      @include head2();
+    }
+    .placetext {
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 4rem auto 4rem;
+      width: auto;
+      &::before {
+        content: "";
+        background-image: url(../images/ball.png);
+        display: inline-block;
+        width: 4rem; /*画像の幅*/
+        height: 3rem; /*画像の高さ*/
+        background-size: contain;
+        vertical-align: middle;
+      }
+    }
+    .placeblock {
+      &__img {
+        img {
+          width: 100%;
+          aspect-ratio: 4 / 3;
+        }
+      }
+      &__map {
+        aspect-ratio: 4 / 3;
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  // ------------ 試合風景
+  .slide {
+    margin: 7rem 0 5rem;
+    h2 {
+      @include head2();
+    }
+    .slide-items {
+      width: 100%;
+      height: 100%;
+      img {
+        height: 30rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  // ------------ 大会一覧
+  .archives {
+    margin: 0 0 5rem;
+    display: block;
+    padding-top: 7rem;
+    h2 {
+      @include head2();
+    }
+    .tournament {
+      display: flex;
+      gap: 4rem;
+      scroll-snap-type: x mandatory;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 0 50% 0 0;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &__list {
+        scroll-snap-align: center;
+        width: 100%;
+        overflow: hidden;
+        flex: 0 0 20rem;
+        height: 25rem;
+        border-radius: 1rem;
+        &:nth-child(1) {
+          margin: 0 0 0 50%;
+        }
+        &_link {
+          display: block;
+          position: relative;
+          height: 100%;
+          width: 100%;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+          span {
+            width: 100%;
+            font-size: 4rem;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            bottom: 3rem;
+            box-shadow: inset;
+          }
+        }
+      }
+    }
+  }
+
+  // ------------------------------ PC
+
+  @media screen and (min-width: 1025px) {
+    // ---------- ビーチバレーボールよつくら大会とは
+    .introduction {
+      margin: 0 0 5rem 0;
+      &__text {
+        max-width: 110rem;
+        line-height: 3rem;
+        text-align: center;
+      }
+    }
+    // ---------- 大会概要
+    .mainlink {
+      grid-template-columns: 25rem 25rem;
+      justify-content: center;
+      gap: 5rem;
+    }
+    // ------------ 大会会場
+    .place {
+      margin: 9rem 0 5rem;
+      .placetext {
+        font-size: 2.5rem;
+        margin: 7rem auto 5rem;
+      }
+      .placeblock {
+        display: flex;
+        height: 50rem;
+        &__img {
+          width: 50%;
+          img {
+            aspect-ratio: auto;
+            object-fit: cover;
+            height: 100%;
+          }
+        }
+        &__map {
+          width: 50%;
+        }
+      }
+    }
+
+    // ------------ 試合風景
+    .slide {
+      margin: 9rem 0 9rem;
+      .slide-items {
+        img {
+          height: 75rem;
+        }
+      }
+      .slick-dots {
+        bottom: -35px;
+      }
+    }
+
+    // ------------ 大会一覧
+    .archives {
+      padding-top: 9rem;
+      .tournament {
+        max-width: 95rem;
+        margin-inline: auto;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 20rem);
+        height: auto;
+        padding: 0;
+        &__list {
+          transition: all .2s ease;
+            margin: 2rem 0;
+          &:nth-child(1) {
+            margin: 2rem 0;
+          }
+          &:nth-last-child(1) {
+            margin: 2rem 0;
+          }
+          &:hover{
+            transform: translateY(-1rem);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,416 @@
+@use "var" as *;
+.single {
+  width: 90%;
+  // ---------- ビーチバレーボールよつくら大会とは
+  .introduction {
+    h1 {
+      @include head1(75rem);
+      span {
+        display: inline-block;
+      }
+    }
+    margin: 0 0 5rem;
+    &__flex {
+      display: block;
+      padding: 2rem;
+      background: #ffffff;
+      &_imgblock {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        width: 100%;
+        margin: 0 0 2rem;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        .img01 {
+          order: 1;
+        }
+        .img02 {
+          order: 2;
+        }
+      }
+      &_txtblock {
+        line-height: 1.8;
+        font-size: 1.4rem;
+        p {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+
+  // ---------- 大会概要
+  .overview {
+    h2 {
+      @include head2();
+    }
+    span {
+      display: inline-block;
+    }
+    margin: 0 0 5rem;
+    table {
+      width: 100%;
+      tr {
+        th {
+          min-width: 9rem;
+          padding: 1rem;
+          border: 0.1rem solid #888888;
+          background-color: #f1f1f1;
+          text-align: center;
+          vertical-align: middle;
+        }
+        td {
+          padding: 1rem;
+          border: 0.1rem solid #888888;
+          background-color: #ffffff;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  // ------------ 予定表
+  .schedule {
+    h2 {
+      @include head2();
+    }
+    margin: 0 0 5rem;
+    &__block {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto 1.5rem;
+      padding: 1rem 1.5rem;
+      background: #afd3e2;
+      &_time,
+      &_doing {
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+      }
+      &_time {
+        width: 30%;
+        font-size: 1.5rem;
+      }
+      &_doing {
+        width: 70%;
+        font-size: 1.8rem;
+      }
+    }
+
+    &__competition {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      margin: 0 auto 1.5rem;
+      padding: 1rem;
+      background: #f57500;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(20%, -30%);
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: url(../images/ball.png) center center no-repeat;
+        background-size: cover;
+      }
+      &_time,
+      &_doing {
+        color: #ffffff;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+      }
+      &_time {
+        width: 30%;
+        font-size: 1.8rem;
+      }
+      &_doing {
+        width: 70%;
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  // ------------ 参加要項
+  .requirements {
+    h2 {
+      @include head2();
+    }
+    margin: 0 0 5rem;
+    .table {
+      margin: 0 auto 2rem;
+      p {
+        margin: 0 1rem 1rem;
+        color: #000000;
+        font-size: 1.4rem;
+      }
+
+      table {
+        width: 100%;
+        margin: 2rem 0 0;
+        tr {
+          th {
+            min-width: 11rem;
+            padding: 1rem;
+            border: 0.1rem solid #888888;
+            background-color: #f1f1f1;
+            text-align: center;
+            vertical-align: middle;
+          }
+
+          td {
+            padding: 1rem;
+            border: 0.1rem solid #888888;
+            background-color: #ffffff;
+            text-align: center;
+            .view_timer {
+              color: #ff2300;
+            }
+            span {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ------------ 大会要項
+  .requirements-pdf {
+    h2 {
+      @include head2();
+    }
+    text-align: center;
+    margin: 0 auto 8rem;
+
+    .btn,
+    a.btn,
+    button.btn {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      line-height: 1.5;
+      padding: 1rem 4rem;
+      border-radius: 0.5rem;
+      color: #212529;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-align: center;
+      vertical-align: middle;
+      transition: all 0.3s;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: all 0.3s;
+    }
+
+    a.btn-border {
+      border: 2px solid #000000;
+      border-radius: 0;
+      background: #ffffff;
+
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+    }
+
+    a.btn-border:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(0) translateY(0);
+      width: 15px;
+      height: 100%;
+      border-radius: 0 50% 50% 0;
+      background: #f57500;
+      transition: all 0.3s;
+
+      -webkit-transition: all 0.3s;
+      -webkit-transform: translateX(0) translateY(0);
+    }
+
+    a.btn-border:hover:before {
+      content: "\f061";
+      transform: translateX(835%) translateY(0.5rem);
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50%;
+      color: #ffffff;
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+
+      -webkit-transform: translateX(835%) translateY(0.5rem);
+    }
+  }
+
+  /*==================================================
+ギャラリーのためのcss
+===================================*/
+  .gallerybox {
+    h2 {
+      @include head2();
+    }
+    .gallery {
+      max-width: 120rem;
+      margin-inline: auto;
+      columns: 3;
+      padding: 0 1.5rem;
+      li {
+        margin-bottom: 2rem;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        vertical-align: bottom;
+      }
+      @media only screen and (max-width: 768px) {
+        columns: 2;
+      }
+      /*画像を出現させるアニメーションCSS*/
+
+      .flipLeft {
+        animation-name: flipLeft;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        perspective-origin: left center;
+        opacity: 0;
+      }
+
+      @keyframes flipLeft {
+        from {
+          transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+          opacity: 0;
+        }
+
+        to {
+          transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // ---------- 大会概要
+  .mainlink {
+    &__button {
+      @include btn($btn-color);
+    }
+  }
+
+  // ------------------------------ PC
+
+  @media screen and (min-width: 1025px) {
+    // ---------- ビーチバレーボールよつくら大会とは
+    .introduction {
+      max-width: 80rem;
+      margin: 0 auto 8rem;
+      &__flex {
+        display: flex;
+        align-items: center;
+        padding: 2rem 0 0;
+        background-color: transparent;
+        &_imgblock {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          position: relative;
+          width: 40%;
+          margin: 0;
+          img {
+            width: 100%;
+            height: auto;
+          }
+          .img02 {
+            order: 2;
+          }
+        }
+        &_txtblock {
+          width: 60%;
+          line-height: 1.8;
+          font-size: 1.6rem;
+          p {
+            margin: 0 0 0 3rem;
+          }
+        }
+      }
+    }
+
+    // ---------- 大会概要
+    .overview {
+      max-width: 80rem;
+      margin: 0 auto 8rem;
+      table {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+    }
+
+    // ------------ 予定表
+    .schedule {
+      max-width: 80rem;
+      margin: 0 auto 8rem;
+      &__block {
+        padding: 2rem 3rem;
+        &_time {
+          font-size: 2rem;
+        }
+        &_doing {
+          font-size: 2.4rem;
+        }
+      }
+      &__competition {
+        padding: 2.5rem 3.5rem;
+
+        &::before {
+          content: "";
+          right: -7%;
+          transform: translate(0, -43%);
+          width: 130px;
+          height: 130px;
+        }
+        &_time {
+          font-size: 2.4rem;
+        }
+        &_doing {
+          font-size: 2.8rem;
+        }
+      }
+    }
+
+    // ------------ 参加要項
+    .requirements {
+      max-width: 80rem;
+      margin: 0 auto 8rem;
+      .table {
+        margin: 0 auto 3rem;
+        p {
+          font-size: 1.5rem;
+        }
+        table {
+          font-size: 1.6rem;
+          font-weight: bold;
+          tr {
+            th {
+              min-width: 16rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

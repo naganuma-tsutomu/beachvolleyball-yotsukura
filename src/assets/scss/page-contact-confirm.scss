@@ -1,256 +1,225 @@
-.main {
-    margin: 0;
-}
-
-.container {
-    margin: 3.0rem auto 5.0rem;
+@use "var" as *;
+h2 {
+  @include head2();
 }
 
 .confirmblock {
-    .representative {
-        margin: 0 0 3rem;
-        padding: 2rem;
-        border: .2rem solid #888888;
-        background: #ffffff;
+  .representative {
+    margin: 0 0 3rem;
+    padding: 2rem;
+    background: #ffffff;
+  }
+
+  .team {
+    padding: 2rem;
+    background: #ffffff;
+
+    // 入力内容確認ボタンの装飾
+    .btn {
+      position: relative;
+      height: 5rem;
+
+      // 読み込みのアニメーションの非表示
+      .wpcf7-spinner {
+        display: none;
+      }
     }
+  }
 
-    .team {
-        padding: 2rem;
-        border: .2rem solid #888888;
-        background: #ffffff;
+  // フォーム内の共通見出し
+  .formtitle {
+    margin: 0 0 2rem;
+    padding: 0 0 1rem;
+    border-bottom: 0.2rem solid #888888;
+    color: #19a7ce;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+  }
 
-        // 入力内容確認ボタンの装飾
-        .btn {
-            position: relative;
-            height: 5rem;
+  &__box {
+    margin: 0 0 2rem;
+    border-bottom: 0.1rem solid #cccccc;
 
-            // 読み込みのアニメーションの非表示
-            .wpcf7-spinner {
-                display: none;
-            }
-
-            input[type="submit"] {
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 60%;
-                margin: 0 auto;
-                padding: 1rem;
-                border-radius: .4rem;
-                box-shadow: 0 .3rem 0 #000000;
-                background: #f57500;
-                color: #ffffff;
-                font-size: 1.5rem;
-                font-weight: bold;
-                text-align: center;
-                &:active {
-                    opacity: .6;
-                }
-            }
-        }
+    span {
+      display: block;
+      margin: 0 0 0.8rem;
     }
+    &_label,
+    &_people {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+    &_item {
+      margin: 0 0.5rem 0.8rem !important;
+      font-size: 1.5rem;
+    }
+    &_minilabel {
+      display: flex;
+      margin: 0 0.5rem;
+      color: #888888;
+      font-size: 1.5rem;
+      font-weight: bold;
+      span:last-child {
+        padding: 0 0 0 0.5rem;
+        color: #000000;
+        font-size: 1.4rem;
+        font-weight: normal;
+      }
+    }
+  }
 
-    // フォーム内の共通見出し
-    .formtitle {
-        margin: 0 0 2.0rem;
-        padding: 0 0 1rem;
-        border-bottom: .2rem solid #888888;
-        color: #19a7ce;
-        font-size: 1.8rem;
+  .privacytxt {
+    height: 15rem;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    border: 0.2rem solid #cccccc;
+
+    &__title {
+      margin: 0 auto 1rem;
+      h5 {
+        font-size: 2rem;
         font-weight: bold;
+        text-decoration: underline;
         text-align: center;
+      }
     }
 
     &__box {
-        margin: 0 0 2rem;
-        border-bottom: .1rem solid #cccccc;
+      margin: 0 auto 3rem;
 
-        span {
-            display: block;
-            margin: 0 0 .8rem;
-        }
-        &_label, &_people {
-            font-size: 1.6rem;
-            font-weight: bold;
-        }
-        &_item {
-            margin: 0 .5rem .8rem !important;
-            font-size: 1.5rem;
-        }
-        &_minilabel {
-            display: flex;
-            margin: 0 .5rem;
-            color: #888888;
-            font-size: 1.5rem;
-            font-weight: bold;
-            span:last-child {
-                padding: 0 0 0 .5rem;
-                color: #000000;
-                font-size: 1.4rem;
-                font-weight: normal;
-            }
-        }
+      &_list {
+        list-style: auto !important;
+        list-style-type: decimal;
+        padding: 0 0 0 2rem;
+      }
+
+      &_head {
+        display: block;
+        margin: 0 0 1rem 0;
+        color: #000000;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      p {
+        padding: 0 0 0 2rem;
+      }
+
+      p,
+      li {
+        line-height: 2;
+        color: #4d4d4d;
+        font-size: 1.3rem;
+      }
+
+      .first {
+        list-style: none;
+      }
     }
+  }
 
-    .privacytxt {
-        height: 15.0rem;
-        margin: 0 auto 2rem;
-        padding: 1.0rem;
-        overflow-y: scroll;
-        border: .2rem solid #cccccc;
-
-        &__title {
-            margin: 0 auto 1.0rem;
-            h5 {
-                font-size: 2.0rem;
-                font-weight: bold;
-                text-decoration: underline;
-                text-align: center;
-            }
-        }
-
-        &__box {
-            margin: 0 auto 3rem;
-
-            &_list {
-                list-style: auto !important;
-                list-style-type: decimal;
-                padding: 0 0 0 2rem;
-            }
-
-            &_head {
-                display: block;
-                margin: 0 0 1rem 0;
-                color: #000000;
-                font-size: 1.5rem;
-                font-weight: bold;
-            }
-
-            p {
-                padding: 0 0 0 2rem;
-            }
-
-            p, li {
-                line-height: 2;
-                color: #4d4d4d;
-                font-size: 1.3rem;
-            }
-
-            .first {
-                list-style: none;
-            }
-        }
+  .btncheck {
+    margin: 0 auto 3rem;
+    text-align: center;
+    .wpcf7-form-control-wrap {
+      font-size: 1.4rem;
     }
+  }
 
-    .btncheck {
-        margin: 0 auto 3.0rem;
-        text-align: center;
-        .wpcf7-form-control-wrap {
-            font-size: 1.4rem;
-        }
+  .btngroup {
+    display: flex;
+    justify-content: space-between;
+    input[type="button"] {
+      display: block;
+      width: 45%;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #cccccc;
+      color: #000000;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      &:active {
+        opacity: 0.6;
+      }
     }
-
-    .btngroup {
-        display: flex;
-        justify-content: space-between;
-        a {
-            display: block;
-            width: 45%;
-            padding: 1rem;
-            border-radius: .4rem;
-            box-shadow: 0 .3rem 0 #000000;
-            background: #cccccc;
-            color: #000000;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
-            &:active {
-                opacity: .6;
-            }
-        }
-        input[type="submit"] {
-            display: block;
-            width: 45%;
-            padding: 1rem;
-            border-radius: .4rem;
-            box-shadow: 0 .3rem 0 #000000;
-            background: #f57500;
-            color: #ffffff;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
-            &:active {
-                opacity: .6;
-            }
-        }
-        .wpcf7-spinner {
-            display: none;
-        }
+    input[type="submit"] {
+      display: block;
+      width: 45%;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #f57500;
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      &:active {
+        opacity: 0.6;
+      }
+      &:disabled {
+        opacity: 0.6;
+      }
     }
-}
-
-// 自動で非表示になってしまうので強制的に表示
-.wpcf7-previous {
-    display: block !important;
+    .wpcf7-spinner {
+      display: none;
+    }
+  }
 }
 
 @media screen and (min-width: 1025px) {
-    .container {
-        max-width: 80rem;
-        margin: 8.0rem auto 8.0rem;
+  .container {
+    max-width: 80rem;
+  }
+
+  .confirmblock {
+    padding: 0 4rem 2rem;
+
+    // フォーム内の共通見出し
+    .formtitle {
+      font-size: 2.2rem;
     }
 
-    .confirmblock {
-        padding: 4.0rem 4.0rem 2.0rem;
-
-        // フォーム内の共通見出し
-        .formtitle {
-            font-size: 2.2rem;
-        }
-
-        .representative {
-            padding: 4.0rem;
-        }
-
-        .team {
-            padding: 4.0rem;
-        }
-
-        &__box {
-            &_label, &_people {
-                font-size: 1.8rem;
-            }
-        }
+    .representative {
+      padding: 4rem;
     }
 
+    .team {
+      padding: 4rem;
+    }
 
+    &__box {
+      &_label,
+      &_people {
+        font-size: 1.8rem;
+      }
+    }
 
     .btncheck {
-        margin: 0 auto 1.0rem;
-        .wpcf7-form-control-wrap {
-            font-size: 1.4rem;
-        }
+      .wpcf7-form-control-wrap {
+        font-size: 1.4rem;
+      }
     }
 
     .btngroup {
-        display: flex;
-        justify-content: space-between;
-        a {
-            margin: 0 5.0rem;
-            &:hover {
-                opacity: .6;
-            }
+      display: flex;
+      justify-content: space-between;
+      a {
+        &:hover {
+          opacity: 0.6;
         }
-        input[type="submit"] {
-            margin: 0 5.0rem;
-            &:hover {
-                opacity: .6;
-            }
+      }
+      input[type="submit"],
+      input[type="button"] {
+        margin: 0 5rem;
+        &:hover {
+          opacity: 0.6;
         }
-        .wpcf7-spinner {
-            display: none;
-        }
+      }
+      .wpcf7-spinner {
+        display: none;
+      }
     }
+  }
 }
