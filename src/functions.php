@@ -7,6 +7,8 @@ add_action('wp_enqueue_scripts', function () {
 
   // jQueryを読み込む
   wp_enqueue_script('jquery', get_theme_file_uri('/assets/js/library/jquery-3.6.0.min.js'), array(), '3.6.0', true);
+  wp_enqueue_script('lightbox', get_theme_file_uri('/assets/js/library/lightbox.min.js'), array(), '2.11.4', true);
+  wp_enqueue_style('lightbox', get_theme_file_uri('/assets/css/lib/lightbox.css'), array(), null, 'all');
 
   // サイト全体でのJS
   wp_enqueue_script('global', get_theme_file_uri('/assets/js/common.js'), array(), null, true);
@@ -25,8 +27,10 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('front-page-js', get_theme_file_uri('/assets/js/front-page.js'), array('jquery'), null, true);
   }
 
-  // ------------------------------------------ 参加申込確認画面
-  else if (is_page('contact-confirm')) {
+  // ------------------------------------------ 参加申込
+  else if (is_page('contact')) {
+    wp_enqueue_style('contact', get_theme_file_uri('/assets/css/page-contact.css'), array(), null, 'all');
+  } else if (is_page('contact-confirm')) {
     wp_enqueue_style('contact-confirm', get_theme_file_uri('/assets/css/page-contact-confirm.css'), array(), null, 'all');
   } else if (is_page('contact-thanks')) {
     wp_enqueue_style('contact-thanks', get_theme_file_uri('/assets/css/page-contact-thanks.css'), array(), null, 'all');
@@ -51,3 +55,50 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('single', get_theme_file_uri('/assets/css/single.css'), array(), null, 'all');
   }
 });
+
+
+// 独自設定
+add_action('admin_menu', 'custom_menu_page');
+function custom_menu_page()
+{
+  add_menu_page(
+    '大会申込設定画面',
+    '大会申込設定',
+    'manage_options',
+    'custom_menu_page',
+    'add_custom_menu_page',
+    'dashicons-admin-generic',
+    4
+  );
+  add_action('admin_init', 'register_custom_setting');
+}
+function add_custom_menu_page()
+{
+?>
+  <div class="wrap">
+    <h2>大会申込設定画面</h2>
+    <form method="post" action="options.php" enctype="multipart/form-data" encoding="multipart/form-data">
+      <?php
+      settings_fields('custom-menu-group');
+      do_settings_sections('custom-menu-group'); ?>
+      <div class="metabox-holder">
+        <div class="postbox ">
+          <h3 class='hndle'><span>大会申込設定</span></h3>
+          <div class="inside">
+              <p class="setting_description">大会の申し込みを受け付けるか受け付けないかを設定します。</p>
+            <ul>
+              <li><label><input name="reception" type="radio" value="0" <?php checked(0, get_option('reception')); ?> />募集する</label></li>
+              <li><label><input name="reception" type="radio" value="1" <?php checked(1, get_option('reception')); ?> />募集しない</label></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <?php submit_button(); ?>
+    </form>
+  </div>
+<?php
+}
+function register_custom_setting()
+{
+  register_setting('custom-menu-group', 'reception');
+}

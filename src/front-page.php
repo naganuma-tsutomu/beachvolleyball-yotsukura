@@ -7,7 +7,7 @@ if (isset($data[0])) {
 }
 ?>
 
-<div class="container flont">
+<div class="container front">
     <?php /* ビーチバレーボールよつくら大会とは */ ?>
     <div class="introduction">
         <h1><span>ビーチバレーボール</span><span>よつくら大会</span></h1>
@@ -32,7 +32,7 @@ if (isset($data[0])) {
     <?php /* メインリンク */ ?>
     <div class="mainlink">
         <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
-        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
+        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">参加申し込み</a>
     </div>
     <?php /* 大会会場 */ ?>
     <div class="place">
@@ -50,7 +50,7 @@ if (isset($data[0])) {
     <?php /* メインリンク */ ?>
     <div class="mainlink">
         <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
-        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
+        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">参加申し込み</a>
     </div>
     <?php /* 試合風景 */ ?>
     <div class="slide">
@@ -68,7 +68,7 @@ if (isset($data[0])) {
     <?php /* メインリンク */ ?>
     <div class="mainlink">
         <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
-        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
+        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">参加申し込み</a>
     </div>
 
     <?php /* 大会一覧 */ ?>
@@ -99,36 +99,9 @@ if (isset($data[0])) {
         <?php /* メインリンク */ ?>
         <div class="mainlink">
             <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
-        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
+        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">参加申し込み</a>
         </div>
     <?php endif; ?>
-
-    <!-- 参加要項 -->
-    <!-- <div class="requirements">
-        <h2>参加要項</h2>
-        <div class="table">
-            <table>
-                <tr>
-                    <th>参加料</th>
-                    <td>参加者1名につき1,000円</td>
-                </tr>
-                <tr>
-                    <th>参加資格</th>
-                    <td>中学生以上の健康な方</td>
-                </tr>
-                <tr>
-                    <th>チーム構成</th>
-                    <td><span class="inlinetxt">1チーム4名 【選手登録は最大6名】</span><span class="inlinetxt">※試合中は2名以上の女性が必ず参加</span><span class="inlinetxt">となります。</span></td>
-                </tr>
-                <tr>
-                    <th>締切日</th>
-                    <td>2023年7月14日（金） ※受付終了
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div> -->
-
 
 </div>
 </div>

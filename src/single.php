@@ -5,6 +5,12 @@ Template Name: Custom Template
 ?>
 
 <?php get_header(); ?>
+<?php
+$data = get_posts('post_type=post&posts_per_page=1');
+if (isset($data[0])) {
+  $id = $data[0]->ID;
+}
+?>
 
 <div class="container single">
 
@@ -102,31 +108,49 @@ Template Name: Custom Template
           <th>締切日</th>
           <td><?php the_field('deadline_date'); ?></td>
         </tr>
+        <?php if (!empty(get_field('notes'))) : ?>
+          <tr>
+            <th>注意事項</th>
+            <td><?php the_field('notes'); ?></td>
+          </tr>
+        <?php endif; ?>
       </table>
     </div>
   </div>
 
-  <?php /* メインリンク */ ?>
-  <div class="mainlink">
-    <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
-  </div>
+  <?php if (!empty(get_field('requirements_pdf'))) : ?>
+    <?php $pdf = get_field('requirements_pdf'); ?>
+    <div class="requirements-pdf">
+      <h2>大会要項</h2>
+      <a href="<?php echo $pdf['url']; ?>" class="btn btn-border" target="_blank"><span><?php echo $pdf['title']; ?></span></a>
+    </div>
+  <?php endif; ?>
 
-  <?php /* 参加登録2023 */ ?>
-  <!-- <div class="form" id="form">
-    <h2>参加登録</h2>
-    <div class="participation">
-      <span class="participation__title">参加状況</span>
-      <span class="participation__shape">〇</span>
-      <span class="participation__txt">受付中</span>
-    </div> -->
-  <?php
-  // ショートコードを含むテキスト
-  /* $shortcode_text = '[contact-form-7 id="8d74f92" title="参加申し込みフォーム"]';
-    // ショートコードを処理して出力する
-    echo do_shortcode($shortcode_text); */
-  ?>
+  <?php if (!empty(get_field('img01'))) : ?>
+    <div class="gallerybox">
+      <h2>ギャラリー</h2>
+      <ul class="gallery">
+        <?php for ($i = 0; $i <= 36; $i++) : ?>
+          <?php $field_name = 'img' . sprintf('%02d', $i); ?>
+          <?php if (!empty(get_field($field_name))) : ?>
+            <li>
+              <a href="<?php the_field($field_name); ?>" data-lightbox="gallery1" data-title="ギャラリー">
+                <img src="<?php the_field($field_name); ?>" alt="">
+              </a>
+            </li>
+          <?php endif; ?>
+        <?php endfor; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
 
-  <!-- </div> -->
+  <?php /* 最新の大会（最新の投稿）の場合、申込ボタンを表示 */ ?>
+  <?php if ($id === get_the_ID()) : ?>
+    <?php /* メインリンク */ ?>
+    <div class="mainlink">
+      <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">申し込み</a>
+    </div>
+  <?php endif; ?>
 </div>
 </div>
 

@@ -1,8 +1,8 @@
 @use "var" as *;
-.flont {
+.front {
   // ---------- ビーチバレーボールよつくら大会とは
   .introduction {
-    margin: 7rem 0 5rem 0;
+    margin: 5rem 0 5rem 0;
     h1 {
       @include head1(50rem);
       span {
@@ -101,6 +101,7 @@
       overflow-x: auto;
       scrollbar-width: none;
       -ms-overflow-style: none;
+      padding: 0 50% 0 0;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -113,9 +114,6 @@
         border-radius: 1rem;
         &:nth-child(1) {
           margin: 0 0 0 50%;
-        }
-        &:nth-last-child(1) {
-          margin: 0 50% 0 0 ;
         }
         &_link {
           display: block;
@@ -207,6 +205,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, 20rem);
         height: auto;
+        padding: 0;
         &__list {
           transition: all .2s ease;
             margin: 2rem 0;
