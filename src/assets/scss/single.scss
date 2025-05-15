@@ -307,6 +307,7 @@
 
   // ---------- 大会概要
   .mainlink {
+    padding: 3rem 0 0 0;
     &__button {
       @include btn($btn-color);
     }
