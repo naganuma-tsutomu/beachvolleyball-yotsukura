@@ -1,5 +1,28 @@
 @use "var" as *;
 .front {
+
+  // ---------- メインタイトル
+  .top-title{
+    text-align: center;
+    img{
+      width: 5rem;
+      height: auto;
+      margin: 1rem 0 3rem;
+    }
+    &__head{
+      font-size: 2rem;
+      font-weight: bold;
+      span{
+        display: block;
+      }
+    }
+    &__day{
+      margin: 1rem 0 0 0;
+      color: rgb(255, 0, 0);
+        font-size: 1.8rem;
+    }
+  }
+
   // ---------- ビーチバレーボールよつくら大会とは
   .introduction {
     margin: 5rem 0 5rem 0;
@@ -10,7 +33,7 @@
       }
     }
     &__text {
-      margin: 0 auto 3rem;
+      margin: 0 auto 2.5rem;
       padding: 0 3rem;
       max-width: 55rem;
       text-align: left;
@@ -143,6 +166,19 @@
   // ------------------------------ PC
 
   @media screen and (min-width: 1025px) {
+  // ---------- メインタイトル
+  .top-title{
+    img{
+      width: 7rem;
+      height: auto;
+    }
+    &__head{
+      font-size: 2.5rem;
+    }
+    &__day{
+        font-size: 2rem;
+    }
+  }
     // ---------- ビーチバレーボールよつくら大会とは
     .introduction {
       margin: 0 0 5rem 0;

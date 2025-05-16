@@ -8,6 +8,7 @@ if (isset($data[0])) {
 ?>
 
 <div class="container front">
+
     <?php /* ビーチバレーボールよつくら大会とは */ ?>
     <div class="introduction">
         <h1><span>ビーチバレーボール</span><span>よつくら大会</span></h1>
@@ -28,6 +29,11 @@ if (isset($data[0])) {
         <p class="introduction__text">
             <span>ぜひあなたも参加してみませんか？</span>
         </p>
+    <div class="top-title">
+        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/ball.png')); ?>" alt="">
+        <h2 class="top-title__head"><span>2025年度</span>ビーチバレーボールよつくら大会</h2>
+        <p class="top-title__day">2025年7月27日(日)開催予定</p>
+    </div>
     </div>
     <?php /* メインリンク */ ?>
     <div class="mainlink">
@@ -47,11 +53,6 @@ if (isset($data[0])) {
             </div>
         </div>
     </div>
-    <?php /* メインリンク */ ?>
-    <div class="mainlink">
-        <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
-        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">参加申し込み</a>
-    </div>
     <?php /* 試合風景 */ ?>
     <div class="slide">
         <h2>試合風景</h2>
@@ -63,12 +64,6 @@ if (isset($data[0])) {
             <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/match_scenery_05.jpg')); ?>" alt=""></li>
             <li><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/match_scenery_06.jpg')); ?>" alt=""></li>
         </ul>
-    </div>
-
-    <?php /* メインリンク */ ?>
-    <div class="mainlink">
-        <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
-        <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">参加申し込み</a>
     </div>
 
     <?php /* 大会一覧 */ ?>
