@@ -1,25 +1,24 @@
 @use "var" as *;
 .front {
-
   // ---------- メインタイトル
-  .top-title{
+  .top-title {
     text-align: center;
-    img{
+    img {
       width: 5rem;
       height: auto;
       margin: 1rem 0 3rem;
     }
-    &__head{
+    &__head {
       font-size: 2rem;
       font-weight: bold;
-      span{
+      span {
         display: block;
       }
     }
-    &__day{
+    &__day {
       margin: 1rem 0 0 0;
       color: rgb(255, 0, 0);
-        font-size: 1.8rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -166,19 +165,19 @@
   // ------------------------------ PC
 
   @media screen and (min-width: 1025px) {
-  // ---------- メインタイトル
-  .top-title{
-    img{
-      width: 7rem;
-      height: auto;
-    }
-    &__head{
-      font-size: 2.5rem;
-    }
-    &__day{
+    // ---------- メインタイトル
+    .top-title {
+      img {
+        width: 7rem;
+        height: auto;
+      }
+      &__head {
+        font-size: 2.5rem;
+      }
+      &__day {
         font-size: 2rem;
+      }
     }
-  }
     // ---------- ビーチバレーボールよつくら大会とは
     .introduction {
       margin: 0 0 5rem 0;
@@ -193,6 +192,12 @@
       grid-template-columns: 25rem 25rem;
       justify-content: center;
       gap: 5rem;
+      &__button {
+        transition: all 0.2s ease;
+        &:hover {
+          transform: translateY(-0.5rem);
+        }
+      }
     }
     // ------------ 大会会場
     .place {
@@ -243,15 +248,15 @@
         height: auto;
         padding: 0;
         &__list {
-          transition: all .2s ease;
-            margin: 2rem 0;
+          transition: all 0.2s ease;
+          margin: 2rem 0;
           &:nth-child(1) {
             margin: 2rem 0;
           }
           &:nth-last-child(1) {
             margin: 2rem 0;
           }
-          &:hover{
+          &:hover {
             transform: translateY(-1rem);
           }
         }
