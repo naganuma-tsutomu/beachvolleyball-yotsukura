@@ -1,4 +1,3 @@
-
 // メインメニュー
 $(function () {
   const main = $(".main");
@@ -36,9 +35,9 @@ $(window).on("load", function () {
 });
 
 lightbox.option({
-  'wrapAround': true,//グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
-  'albumLabel': ' %1 / total %2 '//合計枚数中現在何枚目かというキャプションの見せ方を変更できる
-})
+  wrapAround: true, //グループ最後の写真の矢印をクリックしたらグループ最初の写真に戻る
+  albumLabel: " %1 / total %2 ", //合計枚数中現在何枚目かというキャプションの見せ方を変更できる
+});
 
 function fadeAnime() {
   // flipLeft
@@ -63,3 +62,9 @@ $(window).scroll(function () {
 $(window).on("load", function () {
   fadeAnime(); /* アニメーション用の関数を呼ぶ*/
 }); // ここまでページが読み込まれたらすぐに動かしたい場合の記述
+
+document.onkeydown = function (event) {
+  if (event.target.tagName == "INPUT" && event.keyCode == 13) {
+    return false;
+  }
+};
