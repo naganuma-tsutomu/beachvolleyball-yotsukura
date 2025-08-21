@@ -29,17 +29,17 @@ if (isset($data[0])) {
         <p class="introduction__text">
             <span>ぜひあなたも参加してみませんか？</span>
         </p>
-    <div class="top-title">
+    <!-- <div class="top-title">
         <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/ball.png')); ?>" alt="">
         <h2 class="top-title__head"><span>2025年度</span>ビーチバレーボールよつくら大会</h2>
-        <p class="top-title__day">2025年7月27日(日)開催予定</p>
-    </div>
+        <p class="top-title__day">たくさんの参加ありがとうございました！</p>
+    </div> -->
     </div>
     <?php /* メインリンク */ ?>
-    <div class="mainlink">
+    <!-- <div class="mainlink">
         <a class="mainlink__button" href="<?php echo esc_url($current_link); ?>">大会概要</a>
         <a class="mainlink__button" href="<?php echo esc_url(home_url('/contact')); ?>">参加申し込み</a>
-    </div>
+    </div> -->
     <?php /* 大会会場 */ ?>
     <div class="place">
         <h2>大会会場</h2>

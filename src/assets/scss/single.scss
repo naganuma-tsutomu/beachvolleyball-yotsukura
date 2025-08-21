@@ -186,7 +186,9 @@
   }
 
   // ------------ 大会要項
-  .requirements-pdf {
+  .requirements-pdf,
+  .result-pdf
+  {
     h2 {
       @include head2();
     }

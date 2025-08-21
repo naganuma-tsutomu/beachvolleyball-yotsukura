@@ -126,6 +126,14 @@ if (isset($data[0])) {
     </div>
   <?php endif; ?>
 
+  <?php if (!empty(get_field('result_pdf'))) : ?>
+    <?php $pdf = get_field('result_pdf'); ?>
+    <div class="result-pdf">
+      <h2>対戦結果</h2>
+      <a href="<?php echo $pdf['url']; ?>" class="btn btn-border" target="_blank"><span><?php echo $pdf['title']; ?></span></a>
+    </div>
+  <?php endif; ?>
+
   <?php if (!empty(get_field('img01'))) : ?>
     <div class="gallerybox">
       <h2>ギャラリー</h2>
