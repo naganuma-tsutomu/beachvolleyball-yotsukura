@@ -102,3 +102,9 @@ function register_custom_setting()
 {
   register_setting('custom-menu-group', 'reception');
 }
+
+// Contact Form 7の自動でpタグをつける機能をオフにする
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+	return false;
+}
