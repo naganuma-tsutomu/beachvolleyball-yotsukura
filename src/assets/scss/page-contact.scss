@@ -5,9 +5,12 @@
   h2 {
     @include head2();
   }
+
   margin: 0 0 3rem;
+
   .table {
     margin: 0 auto 2rem;
+
     p {
       margin: 0 1rem 1rem;
       color: #000000;
@@ -17,6 +20,7 @@
     table {
       width: 100%;
       margin: 2rem 0 0;
+
       tr {
         th {
           min-width: 11rem;
@@ -32,10 +36,12 @@
           border: 0.1rem solid #888888;
           background-color: #ffffff;
           text-align: center;
+
           .view_timer {
             color: #ff2300;
           }
-          span{
+
+          span {
             display: inline-block;
           }
         }
@@ -56,10 +62,11 @@
   h2 {
     @include head2();
   }
+
   margin: 0 0 5rem;
 
-  fieldset:disabled{
-    input{
+  fieldset:disabled {
+    input {
       background-color: #d4d4d4;
     }
   }
@@ -81,12 +88,14 @@
       font-size: 2.5rem;
       font-weight: bold;
     }
+
     &__shape {
       margin: 1rem;
       color: #ff2300;
       font-size: 5rem;
       font-weight: bold;
     }
+
     &__txt {
       color: #4d4d4d;
       font-size: 1.8rem;
@@ -129,6 +138,7 @@
           font-size: 1.5rem;
           font-weight: bold;
           text-align: center;
+
           &:active {
             opacity: 0.6;
           }
@@ -160,6 +170,7 @@
     color: #333333;
     font-size: 1.4rem;
     font-weight: normal;
+
     &::placeholder {
       opacity: 1;
       color: #afafaf;
@@ -169,18 +180,22 @@
 
   .labelbox {
     margin: 0 0 1.5rem;
+
     &:last-child {
       margin: 0;
     }
+
     .tomember {
       margin: 0 0 1.5rem;
       padding: 0 0 1rem;
       border-bottom: 0.1rem solid #b3b3b3;
     }
+
     .nameblock {
       display: flex;
       justify-content: space-between;
       margin: 1rem 0 0;
+
       &__left {
         width: 48%;
         margin: 0;
@@ -200,13 +215,16 @@
     }
 
     // メンバー
-    .member {
+    .member,
+    .others {
       margin: 0 auto 2rem;
       padding: 0;
       border-bottom: solid 0.1rem #b3b3b3;
+
       &:first-child {
         margin: 0.5rem 0 4rem;
       }
+
       .required {
         color: #ff2300;
         font-size: 12px;
@@ -218,7 +236,8 @@
       }
 
       .membersex,
-      .referee {
+      .referee,
+      .oerder {
         display: block;
       }
 
@@ -232,6 +251,7 @@
       .referee {
         width: 95%;
         margin: 0 auto 2rem;
+
         p {
           margin: 0.5rem 0 0;
           color: #ff2300;
@@ -260,12 +280,57 @@
           border-radius: 4px;
           font-size: 14px !important;
         }
+
         .wpcf7-list-item.first {
           margin: 0.5rem 0 0;
         }
+
         .wpcf7-form-control {
           padding: 0 !important;
         }
+
+        /* 全体の入力欄（input）の角丸変更 */
+        .wpcf7-form-control {
+          border-radius: 4px !important;
+        }
+      }
+    }
+
+    // その他の入力欄
+    .others {
+      .order {
+        color: #888888;
+        font-size: 14px;
+        font-weight: bold;
+        display: block;
+        width: 95%;
+        margin: 0 auto 2rem;
+
+        p {
+          margin: 0.5rem 0 0;
+          color: #ff2300;
+          font-size: 1.3rem;
+          font-weight: normal;
+        }
+      }
+
+      // radioボタンのデザイン変更
+      .order {
+        .wpcf7-list-item {
+          padding: 1rem !important;
+          border: 0.1rem solid #cccccc;
+          border-radius: 4px;
+          font-size: 14px !important;
+        }
+
+        .wpcf7-list-item.first {
+          margin: 0.5rem 0 0;
+        }
+
+        .wpcf7-form-control {
+          padding: 0 !important;
+        }
+
         /* 全体の入力欄（input）の角丸変更 */
         .wpcf7-form-control {
           border-radius: 4px !important;
@@ -328,12 +393,14 @@
     font-size: 14px;
     font-weight: bold;
   }
+
   .postblock__hyphen {
     width: 10%;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
   }
+
   .postblock__right {
     width: 60%;
     margin: 0;
@@ -342,18 +409,24 @@
     font-weight: bold;
   }
 }
+
 @media screen and (min-width: 1025px) {
+
   // ------------ 参加要項
   .requirements {
     max-width: 80rem;
+
     .table {
       margin: 0 auto 3rem;
+
       p {
         font-size: 1.5rem;
       }
+
       table {
         font-size: 1.6rem;
         font-weight: bold;
+
         tr {
           th {
             min-width: 16rem;
@@ -362,6 +435,7 @@
       }
     }
   }
+
   // ------------ 参加申込
   .form {
     max-width: 80rem;
@@ -384,6 +458,7 @@
             width: 40%;
             padding: 1.5rem 2rem;
             font-size: 1.5rem;
+
             &:hover {
               opacity: 0.6;
             }
@@ -409,6 +484,7 @@
         &:last-child {
           margin: 0 auto 3rem;
         }
+
         .required {
           color: #ff2300;
           font-size: 14px;
@@ -464,6 +540,7 @@
         font-size: 1.6rem !important;
       }
     }
+
     .postblock {
       width: 30%;
     }
@@ -475,11 +552,13 @@
       font-size: 14px;
       font-weight: bold;
     }
+
     .postblock__hyphen {
       width: 10%;
       font-size: 2rem;
       font-weight: bold;
     }
+
     .postblock__right {
       width: 60%;
       margin: 0;

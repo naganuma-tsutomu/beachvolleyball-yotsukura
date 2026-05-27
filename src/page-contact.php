@@ -35,6 +35,10 @@ if (isset($data[0])) {
                             <th>注意事項</th>
                             <td><?php the_field('notes', $id); ?></td>
                         </tr>
+                        <tr>
+                            <th>追記</th>
+                            <td><?php the_field('add', $id); ?></td>
+                        </tr>
                     </table>
                 </div>
             </div>
