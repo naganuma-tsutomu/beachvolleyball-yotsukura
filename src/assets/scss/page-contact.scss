@@ -235,12 +235,14 @@
         font-size: 12px;
       }
 
+      .memberadd,
       .membersex,
       .referee,
       .oerder {
         display: block;
       }
 
+      .memberadd,
       .membersex,
       .memnameblock,
       .kanamemnameblock {
@@ -261,6 +263,7 @@
       }
 
       .membersex,
+      .memberadd,
       .memnameblock__left,
       .kanamemnameblock__left,
       .memnameblock__right,
@@ -273,6 +276,7 @@
 
       // radioボタンのデザイン変更
       .membersex,
+      .memberadd,
       .referee {
         .wpcf7-list-item {
           padding: 1rem !important;
@@ -339,10 +343,6 @@
     }
   }
 
-  // 自動で非表示になってしまうので強制的に表示
-  [data-class="wpcf7cf_group"] {
-    display: block !important;
-  }
 
   .required {
     color: #ff2300;
@@ -527,6 +527,7 @@
     }
 
     .membersex,
+    .memberadd,
     .memnameblock__left,
     .kanamemnameblock__left,
     .memnameblock__right,
@@ -535,7 +536,8 @@
       font-size: 1.4rem;
     }
 
-    .membersex {
+    .membersex,
+    .memberadd,{
       .wpcf7-list-item {
         font-size: 1.6rem !important;
       }
