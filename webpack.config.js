@@ -44,6 +44,10 @@ module.exports = (env, argv) => {
       clean: true,
       assetModuleFilename: "assets/images/[name][ext][query]",
     },
+    performance: {
+      // WordPress uses this as a theme preview in wp-admin, not as a page asset.
+      assetFilter: (filename) => filename !== "screenshot.png",
+    },
     module: {
       rules: [
         // sassのコンパイル設定
