@@ -1,287 +1,167 @@
 @use "var" as *;
 
-// ------------ 参加申込
-.form {
+.bento-menu {
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 6rem 0 0;
 
   &__block {
+    margin: 5rem 2rem;
 
-    .representative {
-      margin: 0 0 2rem;
-      padding: 2rem;
-      background: #ffffff;
-    }
-
-    // フォーム内の共通見出し
-    .formtitle {
-      margin: 0 0 2rem;
-      padding: 0 0 1rem;
-      border-bottom: 0.2rem solid #888888;
-      color: #19a7ce;
-      font-size: 1.8rem;
-      font-weight: bold;
-      text-align: center;
-    }
-  }
-
-  .bento-menu {
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    margin: 6rem 0 0;
-
-    &__block {
-      margin: 5rem 2rem;
-
-      .number {
-        line-height: 2rem;
-        align-items: center;
-        position: relative;
-
-        .total-count {
-          display: flex;
-          margin: 0.5rem 0 0 0;
-        }
-
-
-        .p-count {
-          width: 9rem;
-          color: #d92d20;
-          font-size: 1.6rem;
-          font-weight: bold;
-          text-align: center;
-        }
-
-        .p-subtotal {
-          // display: block;
-          margin: 0 0.5rem 0 0;
-          color: #d92d20;
-          font-size: 1.6rem;
-          font-weight: bold;
-        }
-      }
-    }
-
-    &__title {
-      display: block;
-      font-size: 1.6rem;
-      font-weight: bold;
-      position: absolute;
-      top: -2.5rem;
-      left: -14rem;
-    }
-
-    &__card {
-      display: flex;
-      justify-content: center;
-
-    }
-
-    &__img {
-      width: 10rem;
-      margin: 0 3rem 0 0;
-    }
-
-    &__right {
-      display: grid;
+    .number {
+      line-height: 2rem;
       align-items: center;
       position: relative;
-      width: 18rem;
-    }
-  }
 
-
-  // }
-
-  .line-top,
-  .line-bottom {
-    display: block;
-    margin: 5rem 0;
-    border-bottom: 0.1rem solid #b3b3b3;
-  }
-
-  .bento-total {
-    font-weight: bold;
-    text-align: center;
-
-    &__title {
-      display: inline-block;
-      font-size: 2rem;
-      font-weight: bold;
-    }
-
-    &__num,
-    &__count {
-      margin: 1rem 0;
-    }
-
-    &__section {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #c40000;
-    }
-  }
-
-  .label {
-    display: block;
-    margin: 0 0 5px;
-    font-size: 16px;
-    font-weight: bold;
-  }
-
-  // 入力内容確認ボタンの装飾
-  .btn {
-    position: relative;
-    height: 15rem;
-
-    input[type="submit"],
-    input[type="button"] {
-      display: block;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 60%;
-      margin: 0 auto;
-      padding: 1rem;
-      border-radius: 0.4rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-align: center;
-
-      &:active {
-        opacity: 0.6;
-      }
-    }
-
-    input[type="submit"] {
-      top: 80%;
-      background: #f57500;
-      color: #ffffff;
-    }
-
-    input[type="button"] {
-      top: 20%;
-      background: #c4c4c4;
-      color: #353535;
-    }
-  }
-}
-
-@media screen and (min-width: 1025px) {
-
-  // ------------ 参加要項
-  .requirements {
-    max-width: 80rem;
-
-    .table {
-      margin: 0 auto 3rem;
-
-      p {
-        font-size: 1.5rem;
+      .total-count {
+        display: flex;
+        margin: 0.5rem 0 0 0;
       }
 
-      table {
+
+      .p-count {
+        width: 9rem;
+        color: #d92d20;
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .p-subtotal {
+        // display: block;
+        margin: 0 0.5rem 0 0;
+        color: #d92d20;
         font-size: 1.6rem;
         font-weight: bold;
       }
     }
   }
 
-  // ------------ 参加申込
-  .form {
-    max-width: 80rem;
-    margin: 0 auto 8rem;
+  &__title {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    position: absolute;
+    top: -2.5rem;
+    left: -14rem;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__img {
+    width: 10rem;
+    margin: 0 3rem 0 0;
+  }
+
+  &__right {
+    display: grid;
+    align-items: center;
+    position: relative;
+    width: 18rem;
+  }
+}
+
+.line-top,
+.line-bottom {
+  display: block;
+  margin: 5rem 0;
+  border-bottom: 0.1rem solid #b3b3b3;
+}
+
+.bento-total {
+  font-weight: bold;
+  text-align: center;
+
+  &__title {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__num,
+  &__count {
+    margin: 1rem 0;
+  }
+
+  &__section {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #c40000;
+  }
+}
+
+.label {
+  display: block;
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1025px) {
+
+  .label {
+    font-size: 1.8rem;
+  }
+
+  .bento-menu {
 
     &__block {
-      .representative {
-        margin: 0 0 3rem;
-        padding: 4rem;
-        background: #ffffff;
-      }
+      margin: 7rem 2rem;
 
-      // フォーム内の共通見出し
-      .formtitle {
-        font-size: 2.2rem;
-      }
-    }
-
-    .label {
-      font-size: 1.8rem;
-    }
-
-    .bento-menu {
-
-      &__block {
-        margin: 7rem 2rem;
-
-        .number {
-          display: flex;
-          line-height: 2rem;
-          align-items: center;
-
-          .total-count {
-            display: flex;
-            margin: 0 0 0 9rem;
-          }
-
-          .p-count {
-            width: 2rem;
-          }
-
-          // .p-subtotal {
-          //   margin-left: 10rem;
-          // }
-        }
-      }
-
-      &__img {
-        margin: 0 5rem 0 0;
-      }
-
-      &__right {
-        text-align: left;
-        width: 30rem;
+      .number {
+        display: flex;
+        line-height: 2rem;
         align-items: center;
-        position: relative;
 
-        .p-subtotal {
-          margin-left: 10rem;
+        .total-count {
+          display: flex;
+          margin: 0 0 0 9rem;
         }
-      }
 
-      &__title {
-        left: -16rem;
+        .p-count {
+          width: 2rem;
+        }
       }
     }
 
-    .bento-total {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      align-items: baseline;
+    &__img {
+      margin: 0 5rem 0 0;
+    }
 
-      &__title {
-        margin: 0 2rem 0 0;
-      }
+    &__right {
+      text-align: left;
+      width: 30rem;
+      align-items: center;
+      position: relative;
 
-      &__num,
-      &__count{
-        margin: 0;
+      .p-subtotal {
+        margin-left: 10rem;
       }
     }
 
-    // 入力内容確認ボタンの装飾
-    .btn {
+    &__title {
+      left: -16rem;
+    }
+  }
 
-      input[type="submit"],
-      input[type="button"] {
-        width: 25%;
-        padding: 1.5rem 2rem;
-        font-size: 1.5rem;
+  .bento-total {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: baseline;
 
-        &:hover {
-          opacity: 0.6;
-        }
-      }
+    &__title {
+      margin: 0 2rem 0 0;
+    }
+
+    &__num,
+    &__count {
+      margin: 0;
     }
   }
 }

@@ -30,9 +30,13 @@ add_action('wp_enqueue_scripts', function () {
   // ------------------------------------------ 参加申込
   else if (is_page('contact')) {
     wp_enqueue_style('contact', get_theme_file_uri('/assets/css/page-contact.css'), array(), null, 'all');
+    wp_enqueue_style('order-lunchbox', get_theme_file_uri('/assets/css/page-order-lunchbox.css'), array(), null, 'all');
+    wp_enqueue_script('order-lunchbox-js', get_theme_file_uri('/assets/js/order-lunchbox.js'), array('jquery'), null, true);
   } else if (is_page('contact-confirm')) {
     wp_enqueue_style('contact-confirm', get_theme_file_uri('/assets/css/page-contact-confirm.css'), array(), null, 'all');
     wp_enqueue_script('contact-confirm', get_theme_file_uri('/assets/js/contact-confirm.js'), array(), null, true);
+    wp_enqueue_style('order-lunchbox-confirm', get_theme_file_uri('/assets/css/page-order-lunchbox-confirm.css'), array(), null, 'all');
+    wp_enqueue_script('order-lunchbox-confirm-js', get_theme_file_uri('/assets/js/order-lunchbox-confirm.js'), array('jquery'), null, true);
   } else if (is_page('contact-thanks')) {
     wp_enqueue_style('contact-thanks', get_theme_file_uri('/assets/css/page-contact-thanks.css'), array(), null, 'all');
   }
