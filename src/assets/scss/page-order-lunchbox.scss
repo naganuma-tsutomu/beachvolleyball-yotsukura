@@ -1,0 +1,239 @@
+@use "var" as *;
+
+// ------------ 参加申込
+.form {
+
+  &__block {
+
+    .representative {
+      margin: 0 0 2rem;
+      padding: 2rem;
+      background: #ffffff;
+    }
+
+    // フォーム内の共通見出し
+    .formtitle {
+      margin: 0 0 2rem;
+      padding: 0 0 1rem;
+      border-bottom: 0.2rem solid #888888;
+      color: #19a7ce;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .labelbox {
+    margin: 0 0 1.5rem;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    .bento-menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      margin: 3rem 0 0;
+
+      &__block {
+        margin: 2rem;
+
+        .detail {
+          display: block;
+          margin: 0 0 0.5rem;
+        }
+
+        .number {
+          display: flex;
+          line-height: 2rem;
+          align-items: center;
+          margin: 0 0 0 16rem;
+          position: relative;
+
+          .wpcf7-form-control-wrap {
+            display: inline-flex;
+            color: #505050;
+
+            &::after {
+              content: "▼";
+              position: absolute;
+              right: 1rem;
+              top: 50%;
+              transform: translateY(-50%);
+              font-size: 1.2rem;
+              pointer-events: none;
+            }
+
+            .wpcf7-form-control {
+              padding: 0.5rem 4rem 0.5rem 1rem;
+              background: #eee;
+              border-radius: 0.5rem;
+              border: none;
+            }
+          }
+        }
+      }
+
+      &__img {
+        margin: 0 0 1rem;
+      }
+    }
+  }
+
+  .line-top,
+  .line-bottom {
+    display: block;
+    margin: 5rem 0;
+    border-bottom: 0.1rem solid #b3b3b3;
+  }
+
+  .order-check {
+    display: grid;
+    gap: 4rem;
+    justify-content: center;
+    font-weight: bold;
+
+    .your-choices {
+      display: inline-flex;
+    }
+
+    .bento-summary {
+      margin: 0 0 0 3rem;
+
+      .bento-summary-item {
+        margin: 0 0 1rem;
+      }
+    }
+
+    .bento-total-row {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 3rem;
+
+      .bento-total {
+
+        .total-num,
+        .total-count {
+          font-size: 2.5rem;
+          color: #c40000;
+
+        }
+      }
+    }
+  }
+
+  .label {
+    display: block;
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .nameblock,
+  .postblock,
+  .memnameblock,
+  .kanamemnameblock {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .postblock {
+    align-items: center;
+  }
+
+  // 入力内容確認ボタンの装飾
+  .btn {
+    position: relative;
+    height: 5rem;
+
+    // 読み込みのアニメーションの非表示
+    .wpcf7-spinner {
+      display: none;
+    }
+
+    input[type="submit"] {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      margin: 0 auto;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #f57500;
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+
+  // ------------ 参加要項
+  .requirements {
+    max-width: 80rem;
+
+    .table {
+      margin: 0 auto 3rem;
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      table {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // ------------ 参加申込
+  .form {
+    max-width: 80rem;
+    margin: 0 auto 8rem;
+
+    &__block {
+      .representative {
+        margin: 0 0 3rem;
+        padding: 4rem;
+        background: #ffffff;
+      }
+
+      // フォーム内の共通見出し
+      .formtitle {
+        font-size: 2.2rem;
+      }
+    }
+
+    .label {
+      font-size: 1.8rem;
+    }
+
+    .postblock {
+      width: 30%;
+    }
+
+    // 入力内容確認ボタンの装飾
+    .btn {
+      input[type="submit"] {
+        width: 40%;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}

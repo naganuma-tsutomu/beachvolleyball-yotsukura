@@ -36,6 +36,16 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('contact-thanks', get_theme_file_uri('/assets/css/page-contact-thanks.css'), array(), null, 'all');
   }
 
+  // ------------------------------------------ お弁当の注文
+  else if (is_page('order-lunchbox')) {
+    wp_enqueue_style('order-lunchbox', get_theme_file_uri('/assets/css/page-order-lunchbox.css'), array(), null, 'all');
+    wp_enqueue_script('order-lunchbox-js', get_theme_file_uri('/assets/js/order-lunchbox.js'), array('jquery'), null, true);
+  } else if (is_page('order-lunchbox-confirm')) {
+    wp_enqueue_style('order-lunchbox-confirm', get_theme_file_uri('/assets/css/page-order-lunchbox-confirm.css'), array(), null, 'all');
+    wp_enqueue_script('order-lunchbox-confirm-js', get_theme_file_uri('/assets/js/order-lunchbox-confirm.js'), array('jquery'), null, true);
+  } else if (is_page('order-lunchbox-thanks')) {
+    wp_enqueue_style('order-lunchbox-thanks', get_theme_file_uri('/assets/css/page-order-lunchbox-thanks.css'), array(), null, 'all');
+  }
   // ------------------------------------------ 大会要項
   else if (is_page('requirements')) {
     wp_enqueue_style('requirements', get_theme_file_uri('/assets/css/page-requirements.css'), array(), null, 'all');
