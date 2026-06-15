@@ -39,7 +39,7 @@
             <div class="center__flex">
                 <span class="center__flex_h">会計</span>
                 <span class="center__flex_bet">：</span>
-                <span class="center__flex_txt">渡辺 義郎</span>
+                <span class="center__flex_txt">長沼 　励</span>
             </div>
             <div class="center__flex">
                 <span class="center__flex_h">事務局長</span>
@@ -51,7 +51,7 @@
             <div class="right__flex">
                 <span class="right__flex_h">会員</span>
                 <span class="right__flex_bet">：</span>
-                <span class="right__flex_txt">荻　 和弘<br>門馬 裕美<br>愛川 秀子<br>森　 道子<br>佐藤 晃喜<br>柳沼 奈々</span>
+                <span class="right__flex_txt">荻　 和弘<br>渡辺 義郎<br>門馬 裕美<br>愛川 秀子<br>森　 道子<br>佐藤 晃喜<br>小野 　忍<br>鈴木 由実<br>高橋 空見子</span>
             </div>
         </div>
     </div>
