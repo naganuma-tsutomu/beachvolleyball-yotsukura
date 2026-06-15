@@ -1,5 +1,9 @@
 @use "var" as *;
 
+h2 {
+  @include head2();
+}
+
 // ------------ 参加申込
 .form {
 
