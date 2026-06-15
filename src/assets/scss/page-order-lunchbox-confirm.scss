@@ -1,167 +1,403 @@
 @use "var" as *;
 
-.bento-menu {
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin: 6rem 0 0;
+h2 {
+  @include head2();
+}
 
-  &__block {
-    margin: 5rem 2rem;
+.confirmblock {
+  .representative {
+    margin: 0 0 3rem;
+    padding: 2rem;
+    background: #ffffff;
+  }
 
-    .number {
-      line-height: 2rem;
-      align-items: center;
+  .team {
+    padding: 2rem;
+    background: #ffffff;
+
+    // 入力内容確認ボタンの装飾
+    .btn {
       position: relative;
+      height: 5rem;
 
-      .total-count {
-        display: flex;
-        margin: 0.5rem 0 0 0;
-      }
-
-
-      .p-count {
-        width: 9rem;
-        color: #d92d20;
-        font-size: 1.6rem;
-        font-weight: bold;
-        text-align: center;
-      }
-
-      .p-subtotal {
-        // display: block;
-        margin: 0 0.5rem 0 0;
-        color: #d92d20;
-        font-size: 1.6rem;
-        font-weight: bold;
+      // 読み込みのアニメーションの非表示
+      .wpcf7-spinner {
+        display: none;
       }
     }
   }
 
-  &__title {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: bold;
-    position: absolute;
-    top: -2.5rem;
-    left: -14rem;
-  }
-
-  &__card {
-    display: flex;
-    justify-content: center;
-
-  }
-
-  &__img {
-    width: 10rem;
-    margin: 0 3rem 0 0;
-  }
-
-  &__right {
-    display: grid;
-    align-items: center;
-    position: relative;
-    width: 18rem;
-  }
-}
-
-.line-top,
-.line-bottom {
-  display: block;
-  margin: 5rem 0;
-  border-bottom: 0.1rem solid #b3b3b3;
-}
-
-.bento-total {
-  font-weight: bold;
-  text-align: center;
-
-  &__title {
-    display: inline-block;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-
-  &__num,
-  &__count {
-    margin: 1rem 0;
-  }
-
-  &__section {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #c40000;
-  }
-}
-
-.label {
-  display: block;
-  margin: 0 0 5px;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-@media screen and (min-width: 1025px) {
-
-  .label {
+  // フォーム内の共通見出し
+  .formtitle {
+    margin: 0 0 2rem;
+    padding: 0 0 1rem;
+    border-bottom: 0.2rem solid #888888;
+    color: #19a7ce;
     font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__box {
+    margin: 0 0 2rem;
+    border-bottom: 0.1rem solid #cccccc;
+
+    span {
+      display: block;
+      margin: 0 0 0.8rem;
+    }
+
+    &_label,
+    &_people {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    &_item {
+      margin: 0 0.5rem 0.8rem !important;
+      font-size: 1.5rem;
+    }
+
+    &_minilabel {
+      display: flex;
+      margin: 0 0.5rem;
+      color: #888888;
+      font-size: 1.5rem;
+      font-weight: bold;
+
+      span:last-child {
+        padding: 0 0 0 0.5rem;
+        color: #000000;
+        font-size: 1.4rem;
+        font-weight: normal;
+      }
+    }
   }
 
   .bento-menu {
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 6rem 0 0;
 
     &__block {
-      margin: 7rem 2rem;
+      margin: 5rem 2rem;
 
       .number {
-        display: flex;
         line-height: 2rem;
         align-items: center;
+        position: relative;
 
         .total-count {
           display: flex;
-          margin: 0 0 0 9rem;
+          margin: 0.5rem 0 0 0;
         }
 
+
         .p-count {
-          width: 2rem;
+          width: 9rem;
+          color: #d92d20;
+          font-size: 1.6rem;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .p-subtotal {
+          // display: block;
+          margin: 0 0.5rem 0 0;
+          color: #d92d20;
+          font-size: 1.6rem;
+          font-weight: bold;
         }
       }
+    }
+
+    &__title {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: bold;
+      position: absolute;
+      top: -2.5rem;
+      left: -14rem;
+    }
+
+    &__card {
+      display: flex;
+      justify-content: center;
+
     }
 
     &__img {
-      margin: 0 5rem 0 0;
+      width: 10rem;
+      margin: 0 3rem 0 0;
     }
 
     &__right {
-      text-align: left;
-      width: 30rem;
+      display: grid;
       align-items: center;
       position: relative;
-
-      .p-subtotal {
-        margin-left: 10rem;
-      }
-    }
-
-    &__title {
-      left: -16rem;
+      width: 18rem;
     }
   }
 
+  .line-top,
+  .line-bottom {
+    display: block;
+    margin: 5rem 0;
+    border-bottom: 0.1rem solid #b3b3b3;
+  }
+
   .bento-total {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    align-items: baseline;
+    font-weight: bold;
+    text-align: center;
 
     &__title {
-      margin: 0 2rem 0 0;
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: bold;
     }
 
     &__num,
     &__count {
-      margin: 0;
+      margin: 1rem 0;
+    }
+
+    &__section {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #c40000;
+    }
+  }
+
+  .label {
+    display: block;
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+
+  .privacytxt {
+    height: 15rem;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    overflow-y: scroll;
+    border: 0.2rem solid #cccccc;
+
+    &__title {
+      margin: 0 auto 1rem;
+
+      h5 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-decoration: underline;
+        text-align: center;
+      }
+    }
+
+    &__box {
+      margin: 0 auto 3rem;
+
+      &_list {
+        list-style: auto !important;
+        list-style-type: decimal;
+        padding: 0 0 0 2rem;
+      }
+
+      &_head {
+        display: block;
+        margin: 0 0 1rem 0;
+        color: #000000;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      p {
+        padding: 0 0 0 2rem;
+      }
+
+      p,
+      li {
+        line-height: 2;
+        color: #4d4d4d;
+        font-size: 1.3rem;
+      }
+
+      .first {
+        list-style: none;
+      }
+    }
+  }
+
+  .btncheck {
+    margin: 0 auto 3rem;
+    text-align: center;
+
+    .wpcf7-form-control-wrap {
+      font-size: 1.4rem;
+    }
+  }
+
+  .btn {
+    display: flex;
+    justify-content: space-between;
+
+    input[type="button"] {
+      display: block;
+      width: 45%;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #cccccc;
+      color: #000000;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 45%;
+      padding: 1rem;
+      border-radius: 0.4rem;
+      background: #f57500;
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+
+      &:active {
+        opacity: 0.6;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+
+    .wpcf7-spinner {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    max-width: 80rem;
+  }
+
+  .confirmblock {
+    padding: 0 4rem 2rem;
+
+    // フォーム内の共通見出し
+    .formtitle {
+      font-size: 2.2rem;
+    }
+
+    .representative {
+      padding: 4rem;
+    }
+
+    .team {
+      padding: 4rem;
+    }
+
+    &__box {
+
+      &_label,
+      &_people {
+        font-size: 1.8rem;
+      }
+    }
+
+    .bento-menu {
+
+      &__block {
+        margin: 7rem 2rem;
+
+        .number {
+          display: flex;
+          line-height: 2rem;
+          align-items: center;
+
+          .total-count {
+            display: flex;
+            margin: 0 0 0 9rem;
+          }
+
+          .p-count {
+            width: 2rem;
+          }
+        }
+      }
+
+      &__img {
+        margin: 0 5rem 0 0;
+      }
+
+      &__right {
+        text-align: left;
+        width: 30rem;
+        align-items: center;
+        position: relative;
+
+        .p-subtotal {
+          margin-left: 10rem;
+        }
+      }
+
+      &__title {
+        left: -16rem;
+      }
+    }
+
+    .bento-total {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      align-items: baseline;
+
+      &__title {
+        margin: 0 2rem 0 0;
+      }
+
+      &__num,
+      &__count {
+        margin: 0;
+      }
+    }
+
+    .btncheck {
+      .wpcf7-form-control-wrap {
+        font-size: 1.4rem;
+      }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      input[type="submit"],
+      input[type="button"] {
+        margin: 0 5rem;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      .wpcf7-spinner {
+        display: none;
+      }
     }
   }
 }
