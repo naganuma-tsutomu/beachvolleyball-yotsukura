@@ -23,11 +23,51 @@
     }
   }
 
+  // フォーム場の入力欄の共通css
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    padding: 1rem 1rem;
+    border: 0.1rem solid #cccccc;
+    border-radius: 0.4rem;
+    color: #333333;
+    font-size: 1.4rem;
+    font-weight: normal;
+
+    &::placeholder {
+      opacity: 1;
+      color: #afafaf;
+      font-weight: normal;
+    }
+  }
+
   .labelbox {
     margin: 0 0 1.5rem;
 
     &:last-child {
       margin: 0;
+    }
+
+    .tomember {
+      margin: 0 0 1.5rem;
+      padding: 0 0 1rem;
+      border-bottom: 0.1rem solid #b3b3b3;
+    }
+
+    .nameblock {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0 0;
+
+      &__left,
+      &__right {
+        width: 48%;
+        margin: 0;
+        color: #888888;
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
     }
 
     .bento-menu {
@@ -79,6 +119,8 @@
 
       &__img {
         margin: 0 0 1rem;
+        width: 28rem;
+        height: auto;
       }
     }
   }
@@ -92,16 +134,23 @@
 
   .order-check {
     display: grid;
-    gap: 4rem;
+    gap: 3rem;
     justify-content: center;
     font-weight: bold;
 
-    .your-choices {
-      display: inline-flex;
+    // .your-choices {
+    // display: inline-flex;
+    // }
+
+    .choices-title {
+      display: block;
+      margin: 0 0 1rem 0;
+      font-size: 2rem;
+      font-weight: bold;
     }
 
     .bento-summary {
-      margin: 0 0 0 3rem;
+      // margin: 0 0 0 3rem;
 
       .bento-summary-item {
         margin: 0 0 1rem;
@@ -123,6 +172,16 @@
         }
       }
     }
+  }
+
+  .required {
+    color: #ff2300;
+    font-size: 14px;
+  }
+
+  .any {
+    color: #0080ff;
+    font-size: 14px;
   }
 
   .label {
@@ -213,6 +272,46 @@
       .formtitle {
         font-size: 2.2rem;
       }
+    }
+
+    .labelbox {
+      .nameblock {
+        &__left {
+          font-size: 1.4rem;
+        }
+      }
+
+      // メンバー
+      .member {
+        &:last-child {
+          margin: 0 auto 3rem;
+        }
+
+        .required {
+          color: #ff2300;
+          font-size: 14px;
+        }
+
+        .any {
+          color: #0080ff;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .required {
+      color: #ff2300;
+      font-size: 1.4rem;
+    }
+
+    .any {
+      color: #0080ff;
+      font-size: 1.4rem;
+    }
+
+    .nameblock__right,
+    .nameblock__left {
+      font-size: 1.4rem;
     }
 
     .label {
