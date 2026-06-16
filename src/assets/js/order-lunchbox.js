@@ -1,5 +1,3 @@
-const { Input } = require("postcss");
-
 jQuery(document).ready(function ($) {
     // 必要な要素をjQueryオブジェクトとして取得
     const $selectBoxes = $('.bento-select');
