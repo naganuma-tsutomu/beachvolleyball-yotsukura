@@ -1,19 +1,25 @@
 @use "var" as *;
+
 .single {
   width: 90%;
+
   // ---------- ビーチバレーボールよつくら大会とは
   .introduction {
     h1 {
       @include head1(75rem);
+
       span {
         display: inline-block;
       }
     }
+
     margin: 0 0 5rem;
+
     &__flex {
       display: block;
       padding: 2rem;
       background: #ffffff;
+
       &_imgblock {
         display: flex;
         justify-content: space-between;
@@ -21,20 +27,25 @@
         position: relative;
         width: 100%;
         margin: 0 0 2rem;
+
         img {
           width: 100%;
           height: auto;
         }
+
         .img01 {
           order: 1;
         }
+
         .img02 {
           order: 2;
         }
       }
+
       &_txtblock {
         line-height: 1.8;
         font-size: 1.4rem;
+
         p {
           margin: 0 1rem;
         }
@@ -47,12 +58,16 @@
     h2 {
       @include head2();
     }
+
     span {
       display: inline-block;
     }
+
     margin: 0 0 5rem;
+
     table {
       width: 100%;
+
       tr {
         th {
           min-width: 9rem;
@@ -62,6 +77,7 @@
           text-align: center;
           vertical-align: middle;
         }
+
         td {
           padding: 1rem;
           border: 0.1rem solid #888888;
@@ -77,7 +93,9 @@
     h2 {
       @include head2();
     }
+
     margin: 0 0 5rem;
+
     &__block {
       display: flex;
       align-items: center;
@@ -85,6 +103,7 @@
       margin: 0 auto 1.5rem;
       padding: 1rem 1.5rem;
       background: #afd3e2;
+
       &_time,
       &_doing {
         color: #ffffff;
@@ -92,10 +111,12 @@
         text-align: center;
         vertical-align: middle;
       }
+
       &_time {
         width: 30%;
         font-size: 1.5rem;
       }
+
       &_doing {
         width: 70%;
         font-size: 1.8rem;
@@ -123,6 +144,7 @@
         background: url(../images/ball.png) center center no-repeat;
         background-size: cover;
       }
+
       &_time,
       &_doing {
         color: #ffffff;
@@ -130,10 +152,12 @@
         text-align: center;
         vertical-align: middle;
       }
+
       &_time {
         width: 30%;
         font-size: 1.8rem;
       }
+
       &_doing {
         width: 70%;
         font-size: 2.4rem;
@@ -146,9 +170,12 @@
     h2 {
       @include head2();
     }
+
     margin: 0 0 5rem;
+
     .table {
       margin: 0 auto 2rem;
+
       p {
         margin: 0 1rem 1rem;
         color: #000000;
@@ -158,6 +185,7 @@
       table {
         width: 100%;
         margin: 2rem 0 0;
+
         tr {
           th {
             min-width: 11rem;
@@ -173,9 +201,11 @@
             border: 0.1rem solid #888888;
             background-color: #ffffff;
             text-align: center;
+
             .view_timer {
               color: #ff2300;
             }
+
             span {
               display: inline-block;
             }
@@ -187,11 +217,11 @@
 
   // ------------ 大会要項
   .requirements-pdf,
-  .result-pdf
-  {
+  .result-pdf {
     h2 {
       @include head2();
     }
+
     text-align: center;
     margin: 0 auto 8rem;
 
@@ -267,22 +297,25 @@
     h2 {
       @include head2();
     }
+
     .gallery {
       max-width: 120rem;
       margin-inline: auto;
-      columns: 3;
       padding: 0 1.5rem;
-      li {
-        margin-bottom: 2rem;
-      }
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 横に同じ幅(1fr)で3つ並べる */
+      gap: 2rem;
+
       img {
         width: 100%;
         height: auto;
         vertical-align: bottom;
       }
+
       @media only screen and (max-width: 768px) {
-        columns: 2;
+        grid-template-columns: repeat(2, 1fr); /* 横に同じ幅(1fr)で2つ並べる */
       }
+
       /*画像を出現させるアニメーションCSS*/
 
       .flipLeft {
@@ -310,6 +343,7 @@
   // ---------- 大会概要
   .mainlink {
     padding: 3rem 0 0 0;
+
     &__button {
       @include btn($btn-color);
     }
@@ -318,15 +352,18 @@
   // ------------------------------ PC
 
   @media screen and (min-width: 1025px) {
+
     // ---------- ビーチバレーボールよつくら大会とは
     .introduction {
       max-width: 80rem;
       margin: 0 auto 8rem;
+
       &__flex {
         display: flex;
         align-items: center;
         padding: 2rem 0 0;
         background-color: transparent;
+
         &_imgblock {
           display: flex;
           justify-content: space-between;
@@ -334,18 +371,22 @@
           position: relative;
           width: 40%;
           margin: 0;
+
           img {
             width: 100%;
             height: auto;
           }
+
           .img02 {
             order: 2;
           }
         }
+
         &_txtblock {
           width: 60%;
           line-height: 1.8;
           font-size: 1.6rem;
+
           p {
             margin: 0 0 0 3rem;
           }
@@ -357,6 +398,7 @@
     .overview {
       max-width: 80rem;
       margin: 0 auto 8rem;
+
       table {
         font-size: 1.6rem;
         font-weight: bold;
@@ -367,15 +409,19 @@
     .schedule {
       max-width: 80rem;
       margin: 0 auto 8rem;
+
       &__block {
         padding: 2rem 3rem;
+
         &_time {
           font-size: 2rem;
         }
+
         &_doing {
           font-size: 2.4rem;
         }
       }
+
       &__competition {
         padding: 2.5rem 3.5rem;
 
@@ -386,9 +432,11 @@
           width: 130px;
           height: 130px;
         }
+
         &_time {
           font-size: 2.4rem;
         }
+
         &_doing {
           font-size: 2.8rem;
         }
@@ -399,14 +447,18 @@
     .requirements {
       max-width: 80rem;
       margin: 0 auto 8rem;
+
       .table {
         margin: 0 auto 3rem;
+
         p {
           font-size: 1.5rem;
         }
+
         table {
           font-size: 1.6rem;
           font-weight: bold;
+
           tr {
             th {
               min-width: 16rem;
