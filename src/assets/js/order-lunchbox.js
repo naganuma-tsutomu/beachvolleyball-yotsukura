@@ -70,7 +70,6 @@ jQuery(document).ready(function ($) {
         // .bento-menu__block内にあるhiddenフィールドを探して、小計を書き込む
         $('.bento-total-row').find('input[name="bento-total-count"]').val(totalCount);
         $('.bento-total-row').find('input[name="bento-total-num"]').val(grandTotal);
-
     }
 
     // セレクトボックスに変更があったら再計算を実行
