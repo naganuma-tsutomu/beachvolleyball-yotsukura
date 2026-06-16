@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
       member05.style.display = 'none';
     }
   }
-
   if (member06) {
     const add06 = member06.querySelector('.confirm-add')?.textContent.trim();
     if (add06 !== 'する') {
