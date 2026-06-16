@@ -27,7 +27,6 @@ jQuery(document).ready(function ($) {
                 hasSelection = true;
 
                 const price = parseInt($block.data('price'), 10); // data-price属性から取得
-                const count = parseInt($select.val(), 10) || 0; // 選択された個数
                 totalCount += count;
                 const name = $block.data('name');                // data-name属性から取得
 
@@ -70,19 +69,10 @@ jQuery(document).ready(function ($) {
             if ($totalNumDisplay.length) $totalNumDisplay.val(grandTotal.toLocaleString() + '円');
         }
 
-        // 全体の合計個数・合計金額のhiddenフィールドにも値を保存
-        // $totalNumDisplay.val(grandTotal);
-        // $countDisplay.val(totalCount);
-
         // .bento-menu__block内にあるhiddenフィールドを探して、小計を書き込む
         $('.bento-total-row').find('input[name="bento-total-count"]').val(totalCount);
         $('.bento-total-row').find('input[name="bento-total-num"]').val(grandTotal);
 
-
-        // .order-check内にあるhiddenフィールドを探して、合計個数を書き込む
-        // $('.bento-total').find('input[name="bento-total-count"]').val(totalCount);
-        // .bento-total-row内にあるhiddenフィールドを探して、合計金額を書き込む
-        // $('.bento-total').find('input[name="bento-total-num"]').val(grandTotal);
     }
 
     // セレクトボックスに変更があったら再計算を実行
