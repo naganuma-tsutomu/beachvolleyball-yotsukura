@@ -29,11 +29,11 @@ if (isset($data[0])) {
                         </tr>
                         <tr>
                             <th>参加料</th>
-                            <td><?php the_field('entry_fee'); ?></td>
+                            <td><?php the_field('entry_fee', $id); ?></td>
                         </tr>
                         <tr>
                             <th>支払方法</th>
-                            <td><?php the_field('payment_method'); ?></td>
+                            <td><?php the_field('payment_method', $id); ?></td>
                         </tr>
                         <tr>
                             <th>注意事項</th>
