@@ -16,10 +16,6 @@ if (isset($data[0])) {
                 <div class="table">
                     <table>
                         <tr>
-                            <th>参加料</th>
-                            <td><?php the_field('entry_fee', $id); ?></td>
-                        </tr>
-                        <tr>
                             <th>参加資格</th>
                             <td><?php the_field('entry_qualification', $id); ?></td>
                         </tr>
@@ -30,6 +26,14 @@ if (isset($data[0])) {
                         <tr>
                             <th>締切日</th>
                             <td><?php the_field('deadline_date', $id); ?></td>
+                        </tr>
+                        <tr>
+                            <th>参加料</th>
+                            <td><?php the_field('entry_fee'); ?></td>
+                        </tr>
+                        <tr>
+                            <th>支払方法</th>
+                            <td><?php the_field('payment_method'); ?></td>
                         </tr>
                         <tr>
                             <th>注意事項</th>
